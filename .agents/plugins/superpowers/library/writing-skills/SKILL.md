@@ -88,28 +88,56 @@ Way of thinking about problems (flatten-with-flags, test-invariants)
 ### Reference
 API docs, syntax guides, tool documentation (office docs)
 
-## Directory Structure
+## Directory Structure & Registration
 
+In this repository, skills are divided into **visible entrypoints** (in `skills/`) and **hidden libraries** (in `library/`) to reduce context window consumption:
 
 ```
-skills/
-  skill-name/
-    SKILL.md              # Main reference (required)
-    supporting-file.*     # Only if needed
+.agents/plugins/superpowers/
+├── skills/
+│   ├── skill-index.json           # Compact retrieval index
+│   ├── skill-dag.json             # Dependency DAG
+│   └── skillweave-orchestrator/   # SAD orchestrator skill
+└── library/                       # Isolated skill files
+    └── skill-name/
+        └── SKILL.md               # Main skill document
 ```
 
-**Flat namespace** - all skills in one searchable namespace
+### 1. File Location
+Create your new skill inside the hidden library:
+`.agents/plugins/superpowers/library/<skill-name>/SKILL.md`
 
-**Separate files for:**
-1. **Heavy reference** (100+ lines) - API docs, comprehensive syntax
-2. **Reusable tools** - Scripts, utilities, templates
+Only the orchestrator and `using-superpowers` entrypoint should sit in `skills/`.
 
-**Keep inline:**
-- Principles and concepts
-- Code patterns (< 50 lines)
-- Everything else
+### 2. Registration in `skill-index.json`
+Every new skill **MUST** be registered in `.agents/plugins/superpowers/skills/skill-index.json`. Add a new entry to the `skills` array:
+```json
+{
+  "name": "your-skill-name",
+  "description": "Third-person description of when to use",
+  "triggers": ["keyword1", "keyword2", "keyword3"],
+  "outputs": ["output-type-1"],
+  "depends_on": ["prerequisite-skill-name"],
+  "next_skills": ["follow-up-skill-name"],
+  "atomic": true,
+  "path": "library/your-skill-name/SKILL.md",
+  "category": "planning | implementation | debugging | quality | delivery | coordination | meta"
+}
+```
 
-**Editing existing skills:** Use `replace_file_content` or `multi_replace_file_content` for targeted edits to existing SKILL.md files. Reserve `write_to_file` for creating new skills — full rewrites waste tokens and risk losing content.
+### 3. Dependency Declaration in `skill-dag.json`
+Update `.agents/plugins/superpowers/skills/skill-dag.json` by adding the dependency relationships (edges) to match the new skill's inputs and outputs:
+```json
+{
+  "from": "source-skill",
+  "to": "your-skill-name",
+  "type": "required | alternative | concurrent | optional",
+  "output_consumed": "output-type"
+}
+```
+
+### 4. Editing Existing Skills
+Use `replace_file_content` or `multi_replace_file_content` for targeted edits to existing SKILL.md files. Reserve `write_to_file` for creating new skills — full rewrites waste tokens and risk losing content.
 
 ## SKILL.md Structure
 
@@ -670,7 +698,10 @@ Deploying untested skills = deploying untested code. It's a violation of quality
 - [ ] Supporting files only for tools or heavy reference
 
 **Deployment:**
-- [ ] Commit skill to git and push to your fork (if configured)
+- [ ] Place the new skill document inside `.agents/plugins/superpowers/library/<skill-name>/SKILL.md`
+- [ ] Register the skill in the index: add an entry to `.agents/plugins/superpowers/skills/skill-index.json`
+- [ ] Register the dependencies: add edges to `.agents/plugins/superpowers/skills/skill-dag.json`
+- [ ] Commit skill and config files to git and push to your repository
 - [ ] Consider contributing back via PR (if broadly useful)
 
 ## Discovery Workflow
