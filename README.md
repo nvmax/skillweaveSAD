@@ -1,6 +1,6 @@
 # SkillWeave SAD — Superpowers Skill Library
 
-> Implementing the **Decompose → Retrieve → Compose** pipeline from [*SkillWeaver: Compositional Skill Routing for LLM Agents*](https://arxiv.org/pdf/2606.18051) — without MCP, without vector databases, for any IDE or CLI, configured via `.env` (defaulting to LM Studio).
+> Implementing the **Decompose → Retrieve → Compose** pipeline from [*SkillWeaver: Compositional Skill Routing for LLM Agents*](https://arxiv.org/pdf/2606.18051) — without MCP, without vector databases, for any IDE or CLI, configured via `.agents/skillweave.env` (defaulting to LM Studio).
 
 ---
 
@@ -50,16 +50,30 @@ To use this framework as the engine for a new workspace or project:
 
 2. **Copy the `.agents` folder and configuration files into your project:**
    Copy these from your cloned copy of this repository:
-   - The `.agents/` folder (contains the hidden `library/`, `skills/`, and orchestrator)
+   - The `.agents/` folder (contains the hidden `library/`, `skills/`, orchestrator, and CLI scripts)
    - Configuration files: `AGENTS.md`, `CLAUDE.md`, `.clinerules`, `.cursor/rules/skillweave-sad.mdc`, `CONVENTIONS.md`
 
 3. **Configure your environment:**
-   Copy `.env.example` to `.env` and fill it in:
+   Copy `.agents/skillweave.env.example` to `.agents/skillweave.env` and fill it in:
    ```bash
-   cp .env.example .env
+   cp .agents/skillweave.env.example .agents/skillweave.env
    ```
 
-4. **Start your IDE or CLI:**
+4. **Clean your Git tree (Highly Recommended):**
+   To prevent these local utility files and the `.agents/` folder from cluttering your repository's local Git status or being pushed to remote servers, append them to your repository's local Git exclude file:
+   ```bash
+   echo "
+   # SkillWeave SAD
+   .agents/
+   CLAUDE.md
+   AGENTS.md
+   CONVENTIONS.md
+   .clinerules
+   .cursor/rules/skillweave-sad.mdc
+   " >> .git/info/exclude
+   ```
+
+5. **Start your IDE or CLI:**
    Open Antigravity, Claude Code, Cursor, Aider, or Cline in the `my-awesome-project` directory. The adapter files will automatically trigger the orchestrator on your first prompt!
 
 ---
@@ -74,13 +88,13 @@ To use this framework as the engine for a new workspace or project:
 
 2. **Copy the environment configuration:**
    ```bash
-   cp .env.example .env
+   cp .agents/skillweave.env.example .agents/skillweave.env
    ```
    *By default, it is preconfigured to use LM Studio at `http://localhost:1234/v1`.*
 
 3. **Run a test query via the Python CLI:**
    ```bash
-   python skillweave.py "I want to add a dark mode toggle to my React app"
+   python .agents/skillweave.py "I want to add a dark mode toggle to my React app"
    ```
    This will run the SAD loop, decompose the query, match triggers, topologically sort the DAG, and display the plan.
 
@@ -112,9 +126,9 @@ The repository includes pre-built platform rules files that automatically force 
 
 ---
 
-## ⚙️ Configuration via `.env`
+## ⚙️ Configuration via `skillweave.env`
 
-The framework reads the `.env` file at the root of the workspace to determine which LLM API provider to call for decomposition and routing.
+The framework reads the `.agents/skillweave.env` file to determine which LLM API provider to call for decomposition and routing.
 
 ```env
 SKILLWEAVE_PROVIDER=lmstudio
@@ -141,29 +155,30 @@ SkillWeave SAD/
 ├── CONVENTIONS.md                      Aider adapter
 ├── .clinerules                         Cline adapter
 ├── .cursor/rules/skillweave-sad.mdc    Cursor adapter
-├── .env.example                        Configuration template
-├── .gitignore                          Ignores local .env
-├── skillweave.py                       Zero-dependency Python SAD CLI
-└── .agents/plugins/superpowers/
-    ├── skills/
-    │   ├── skill-index.json            ← LOAD THIS FIRST (retrieval index)
-    │   ├── skill-dag.json              ← Dependency graph (DAG)
-    │   └── skillweave-orchestrator/    ← Full SAD pipeline
-    └── library/                        ← Isolated, hidden skills (loaded dynamically)
-        ├── brainstorming/SKILL.md
-        ├── writing-plans/SKILL.md
-        ├── executing-plans/SKILL.md
-        ├── test-driven-development/SKILL.md
-        ├── systematic-debugging/SKILL.md
-        ├── subagent-driven-development/SKILL.md
-        ├── verification-before-completion/SKILL.md
-        ├── finishing-a-development-branch/SKILL.md
-        ├── browser-testing/SKILL.md
-        ├── dispatching-parallel-agents/SKILL.md
-        ├── requesting-code-review/SKILL.md
-        ├── receiving-code-review/SKILL.md
-        ├── using-git-worktrees/SKILL.md
-        └── writing-skills/SKILL.md
+└── .agents/
+    ├── skillweave.py                   Zero-dependency Python SAD CLI
+    ├── rebuild_index.py                Rebuilds skill-index.json
+    ├── skillweave.env.example          Configuration template
+    └── plugins/superpowers/
+        ├── skills/
+        │   ├── skill-index.json        ← LOAD THIS FIRST (retrieval index)
+        │   ├── skill-dag.json          ← Dependency graph (DAG)
+        │   └── skillweave-orchestrator/← Full SAD pipeline
+        └── library/                    ← Isolated, hidden skills (loaded dynamically)
+            ├── brainstorming/SKILL.md
+            ├── writing-plans/SKILL.md
+            ├── executing-plans/SKILL.md
+            ├── test-driven-development/SKILL.md
+            ├── systematic-debugging/SKILL.md
+            ├── subagent-driven-development/SKILL.md
+            ├── verification-before-completion/SKILL.md
+            ├── finishing-a-development-branch/SKILL.md
+            ├── browser-testing/SKILL.md
+            ├── dispatching-parallel-agents/SKILL.md
+            ├── requesting-code-review/SKILL.md
+            ├── receiving-code-review/SKILL.md
+            ├── using-git-worktrees/SKILL.md
+            └── writing-skills/SKILL.md
 ```
 
 ---

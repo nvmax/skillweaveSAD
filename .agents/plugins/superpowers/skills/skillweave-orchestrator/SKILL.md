@@ -35,7 +35,7 @@ To maintain maximum token efficiency and execute the precise routing algorithm, 
 Run the `skillweave.py` script on the user's request:
 
 ```bash
-python skillweave.py "<raw user request>"
+python .agents/skillweave.py "<raw user request>"
 ```
 
 ### Step 2 — Parse the Output
