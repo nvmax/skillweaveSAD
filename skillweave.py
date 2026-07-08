@@ -7,6 +7,12 @@ import math
 import urllib.request
 import urllib.error
 
+try:
+    from sentence_transformers import SentenceTransformer
+    SENTENCE_TRANSFORMERS_AVAILABLE = True
+except ImportError:
+    SENTENCE_TRANSFORMERS_AVAILABLE = False
+
 # List of common English stopwords to filter out for TF-IDF tokenization
 STOPWORDS = set([
     "a", "about", "above", "after", "again", "against", "all", "am", "an", "and", "any", "are", "arent", "as", "at",
@@ -116,7 +122,7 @@ def call_llm(prompt, env):
     provider = env.get("SKILLWEAVE_PROVIDER", "lmstudio").lower()
     model = env.get("SKILLWEAVE_MODEL", "")
     api_key = env.get("SKILLWEAVE_API_KEY", "")
-    base_url = env.get("SKILLWEAVE_BASE_URL", "http://localhost:1234/v1")
+    base_url = env.get("SKILLWEAVE_BASE_URL", "").strip()
     temp = float(env.get("SKILLWEAVE_TEMPERATURE", "0.1"))
     max_tokens = int(env.get("SKILLWEAVE_MAX_TOKENS", "4096"))
 
@@ -124,7 +130,9 @@ def call_llm(prompt, env):
     payload = {}
 
     if provider == "gemini":
-        url = base_url if base_url else "https://generativelanguage.googleapis.com/v1beta/openai/v1/chat/completions"
+        url = base_url if base_url else "https://generativelanguage.googleapis.com/v1beta/openai/v1"
+        if not url.endswith("/chat/completions"):
+            url = url.rstrip("/") + "/chat/completions"
         if not api_key:
             api_key = os.environ.get("GEMINI_API_KEY", "")
         headers["Authorization"] = f"Bearer {api_key}"
@@ -135,7 +143,9 @@ def call_llm(prompt, env):
             "max_tokens": max_tokens
         }
     elif provider == "anthropic":
-        url = base_url if base_url else "https://api.anthropic.com/v1/messages"
+        url = base_url if base_url else "https://api.anthropic.com"
+        if not (url.endswith("/messages") or url.endswith("/messages/")):
+            url = url.rstrip("/") + "/v1/messages"
         headers["x-api-key"] = api_key
         headers["anthropic-version"] = "2023-06-01"
         payload = {
@@ -146,14 +156,18 @@ def call_llm(prompt, env):
         }
     elif provider in ["openai", "lmstudio", "ollama"]:
         if provider == "openai":
-            url = base_url if base_url else "https://api.openai.com/v1/chat/completions"
+            url = base_url if base_url else "https://api.openai.com/v1"
             headers["Authorization"] = f"Bearer {api_key}"
         elif provider == "lmstudio":
-            url = base_url if base_url else "http://localhost:1234/v1/chat/completions"
+            url = base_url if base_url else "http://localhost:1234/v1"
         else: # ollama
-            url = base_url if base_url else "http://localhost:11434/v1/chat/completions"
-            if api_key:
-                headers["Authorization"] = f"Bearer {api_key}"
+            url = base_url if base_url else "http://localhost:11434/v1"
+        
+        if not url.endswith("/chat/completions"):
+            url = url.rstrip("/") + "/chat/completions"
+            
+        if provider == "openai" or (provider == "ollama" and api_key):
+            headers["Authorization"] = f"Bearer {api_key}"
 
         payload = {
             "model": model,
@@ -279,6 +293,72 @@ class TFIDFRetriever:
         scores.sort(key=lambda x: x[0], reverse=True)
         return scores[:top_k]
 
+def dense_cosine_similarity(v1, v2):
+    dot_product = sum(a * b for a, b in zip(v1, v2))
+    norm1 = math.sqrt(sum(a**2 for a in v1))
+    norm2 = math.sqrt(sum(b**2 for b in v2))
+    if norm1 == 0.0 or norm2 == 0.0:
+        return 0.0
+    return dot_product / (norm1 * norm2)
+
+class SentenceTransformerRetriever:
+    def __init__(self, skills):
+        self.skills = skills
+        self.model = SentenceTransformer("all-MiniLM-L6-v2")
+        self.skill_texts = []
+        for s in skills:
+            doc_text = " ".join([
+                s["name"],
+                s["description"],
+                " ".join(s.get("triggers", []))
+            ])
+            self.skill_texts.append(doc_text)
+        # Encode all skill texts into embeddings
+        self.skill_embeddings = self.model.encode(self.skill_texts, convert_to_numpy=True).tolist()
+
+    def retrieve(self, query_text, top_k=10):
+        query_emb = self.model.encode(query_text, convert_to_numpy=True).tolist()
+        scores = []
+        for i, skill_emb in enumerate(self.skill_embeddings):
+            score = dense_cosine_similarity(query_emb, skill_emb)
+            scores.append((score, self.skills[i]))
+        scores.sort(key=lambda x: x[0], reverse=True)
+        return scores[:top_k]
+
+def compatibility(sa, sb, edges):
+    # 1. I/O type coercion
+    sa_outputs = set(sa.get("outputs", []))
+    sb_depends = set(sb.get("depends_on", []))
+    io_score = 0.0
+    if sa_outputs or sb_depends:
+        io_score = len(sa_outputs.intersection(sb_depends)) / max(1, len(sa_outputs.union(sb_depends)))
+    
+    # DAG edge score
+    has_edge = any(edge["from"] == sa["name"] and edge["to"] == sb["name"] for edge in edges)
+    has_reverse = any(edge["from"] == sb["name"] and edge["to"] == sa["name"] for edge in edges)
+    if has_edge:
+        io_score += 0.5
+    if has_reverse:
+        io_score -= 0.5
+
+    # 2. Category Jaccard
+    sa_cat = sa.get("category", "")
+    sb_cat = sb.get("category", "")
+    cat_jaccard = 1.0 if sa_cat and sb_cat and sa_cat == sb_cat else 0.0
+
+    # 3. Keyword co-occurrence
+    sa_triggers = sa.get("triggers", [])
+    sb_triggers = sb.get("triggers", [])
+    sa_tokens = set(tokenize(" ".join(sa_triggers)))
+    sb_tokens = set(tokenize(" ".join(sb_triggers)))
+    keyword_jaccard = 0.0
+    if sa_tokens or sb_tokens:
+        keyword_jaccard = len(sa_tokens.intersection(sb_tokens)) / max(1, len(sa_tokens.union(sb_tokens)))
+
+    # Weighted sum
+    w1, w2, w3 = 0.5, 0.25, 0.25
+    return w1 * io_score + w2 * cat_jaccard + w3 * keyword_jaccard
+
 def run_sad_pipeline(user_query, env):
     print(f"[*] Starting SkillWeave SAD routing pipeline...")
     print(f"[*] Provider: {env.get('SKILLWEAVE_PROVIDER', 'lmstudio')} | Model: {env.get('SKILLWEAVE_MODEL', 'local-model')}")
@@ -304,14 +384,30 @@ def run_sad_pipeline(user_query, env):
     with open(full_dag_path, "r", encoding="utf-8") as f:
         skill_dag = json.load(f)
 
-    # Initialize TF-IDF retriever
-    retriever = TFIDFRetriever(skill_index["skills"])
+    # Initialize retriever
+    if SENTENCE_TRANSFORMERS_AVAILABLE:
+        print("[*] Info: Using SentenceTransformer (all-MiniLM-L6-v2) for semantic retrieval.")
+        retriever = SentenceTransformerRetriever(skill_index["skills"])
+        similarity_threshold = 0.35
+    else:
+        print("[*] Info: sentence-transformers not installed. Falling back to TF-IDF retriever.")
+        retriever = TFIDFRetriever(skill_index["skills"])
+        similarity_threshold = 0.15
 
-    # --- Phase 1: Task Decomposition ---
-    print("\n[*] Phase 1: Task Decomposition (LLM)...")
-    decomposition_prompt = f"""You are the SkillWeave Task Decomposer.
-Your job is to break down the user's request into a sequential list of atomic, domain-specific engineering sub-tasks.
-Avoid generic or compound steps. Keep steps clear, focused, and minimal.
+    # --- Phase 1 & 2: Iterative SAD Feedback Loop (Algorithm 1) ---
+    print("\n[*] Phase 1 & 2: Iterative Skill-Aware Decomposition (SAD) Loop...")
+    
+    hint_set_skills = [] # Initially empty, H_0 = empty
+    subtasks = []
+    max_iterations = 4
+    converged = False
+    
+    for iteration in range(1, max_iterations + 1):
+        if not hint_set_skills:
+            # Initial decomposition, no hints
+            decomposition_prompt = f"""You are the SkillWeave Task Decomposer.
+Your job is to break down the user's request into a sequential list of atomic engineering sub-tasks.
+Avoid generic or compound steps. Keep steps clear, focused, and minimal. Do not mention any specific tools or skills.
 
 User Query: "{user_query}"
 
@@ -327,127 +423,130 @@ Instructions:
 
 Output ONLY the JSON list:
 """
-    
-    decomp_res = call_llm(decomposition_prompt, env)
-    try:
-        subtasks = extract_json_block(decomp_res)
-        if not isinstance(subtasks, list):
-            raise ValueError("LLM response did not parse as a JSON list")
-    except Exception as e:
-        print(f"[-] Failed to parse initial decomposition: {e}. Raw response:\n{decomp_res}", file=sys.stderr)
-        print("[*] Falling back to query as a single sub-task.")
-        subtasks = [user_query]
-
-    print(f"[+] Initial Decomposition complete. Sub-tasks generated:")
-    for i, st in enumerate(subtasks):
-        print(f"  {i+1}. {st}")
-
-    # --- Phase 2: Iterative SAD Verification Loop ---
-    print("\n[*] Phase 2: Iterative Skill Alignment Loop...")
-    
-    aligned_steps = []
-    max_retries = 3
-    retries = 0
-    fully_aligned = False
-    
-    while retries <= max_retries and not fully_aligned:
-        aligned_steps = []
-        unaligned_subtasks = []
-        
-        for st in subtasks:
-            # Retrieve top matching candidate skills
-            matches = retriever.retrieve(st, top_k=3)
-            best_match = matches[0] if matches else (0.0, None)
+        else:
+            # Re-decomposition with hint set
+            hints_json = json.dumps([
+                {"name": s["name"], "description": s["description"], "triggers": s["triggers"]}
+                for s in hint_set_skills
+            ], indent=2)
             
-            score, skill = best_match
-            # Strict threshold check (similarity >= 0.15)
-            if score >= 0.15 and skill:
-                aligned_steps.append({
-                    "subtask": st,
-                    "skill": skill["name"],
-                    "score": score,
-                    "rationale": f"Aligned via semantic search (similarity: {score:.3f})"
-                })
-            else:
-                unaligned_subtasks.append(st)
-                
-        alignment_score = len(aligned_steps) / len(subtasks) if subtasks else 0.0
-        print(f"[*] Loop iteration {retries + 1} | Alignment Score: {alignment_score:.2f} (Aligned: {len(aligned_steps)}/{len(subtasks)})")
-        
-        if alignment_score == 1.0:
-            fully_aligned = True
-            print("[+] All sub-tasks successfully aligned to expert skills!")
-            break
-            
-        if retries == max_retries:
-            print("[!] Maximum re-decomposition retries reached. Proceeding with partial alignment.")
-            # Map unaligned steps to generic implementation skill
-            for st in unaligned_subtasks:
-                aligned_steps.append({
-                    "subtask": st,
-                    "skill": "executing-plans", # Default fallback process skill
-                    "score": 0.0,
-                    "rationale": "Fallback: No highly-aligned skill found"
-                })
-            break
-            
-        # Compile unique candidates for the unaligned tasks
-        print(f"[-] Unaligned sub-tasks detected:")
-        candidates_feedback = []
-        for st in unaligned_subtasks:
-            st_matches = retriever.retrieve(st, top_k=4)
-            candidates_str = ", ".join([f"[{m[1]['name']}]" for m in st_matches if m[1]])
-            print(f"  - \"{st}\" (Suggested skills: {candidates_str})")
-            
-            # Format detailed list for LLM context
-            for score, sk in st_matches:
-                if sk and sk not in candidates_feedback:
-                    candidates_feedback.append(sk)
-                    
-        print("[*] Requesting re-decomposition from LLM with feedback...")
-        
-        feedback_prompt = f"""You are the SkillWeave SAD Alignment Optimizer.
-We are decomposing the user query: "{user_query}"
-Your initial sub-tasks were: {json.dumps(subtasks, indent=2)}
+            decomposition_prompt = f"""You are the SkillWeave Task Decomposer.
+Your job is to break down the user's request into a sequential list of atomic engineering sub-tasks.
+Avoid generic or compound steps. Keep steps clear, focused, and minimal.
 
-CRITICAL ERROR: The following sub-tasks could NOT be aligned with any available skills in our library:
-{json.dumps(unaligned_subtasks, indent=2)}
+User Query: "{user_query}"
 
-Here is a list of candidate skills from our library that you MUST align to:
-{json.dumps([{"name": sk["name"], "description": sk["description"], "triggers": sk["triggers"]} for sk in candidates_feedback], indent=2)}
+To help you decompose this task, here is a "hint set" of candidate skills available in our library:
+{hints_json}
 
 Instructions:
-1. Re-decompose or rephrase the unaligned sub-tasks so they map cleanly onto the triggers and descriptions of the candidate skills.
-2. Return the COMPLETE, updated, sequential list of sub-tasks in JSON.
-3. Output ONLY a valid JSON list of strings (no other text).
+1. Decompose the user query into sub-tasks such that each sub-task aligns closely with one of the candidate skills in the hint set.
+2. Adjust the vocabulary and granularity of the sub-tasks to match the names, descriptions, and triggers of the candidate skills.
+3. Output ONLY a valid JSON list of strings representing the sub-tasks in sequential order.
+4. Do NOT write any code, markdown, or conversational preambles.
 
-Updated Sub-tasks JSON:
+Output ONLY the JSON list:
 """
         
-        decomp_res = call_llm(feedback_prompt, env)
+        decomp_res = call_llm(decomposition_prompt, env)
         try:
             new_subtasks = extract_json_block(decomp_res)
-            if isinstance(new_subtasks, list) and len(new_subtasks) > 0:
-                subtasks = new_subtasks
-                print(f"[+] Re-decomposition loaded for next iteration:")
-                for i, st in enumerate(subtasks):
-                    print(f"  {i+1}. {st}")
-            else:
-                print("[-] Received invalid JSON format from LLM feedback. Retrying with same tasks.")
+            if not isinstance(new_subtasks, list):
+                raise ValueError("LLM response did not parse as a JSON list")
+            subtasks = new_subtasks
         except Exception as e:
-            print(f"[-] Failed to parse re-decomposition response: {e}.", file=sys.stderr)
+            print(f"[-] Loop iteration {iteration}: Failed to parse decomposition: {e}\nRaw response:\n{decomp_res}", file=sys.stderr)
+            if iteration == 1:
+                print("[*] Falling back to query as a single sub-task.")
+                subtasks = [user_query]
+        
+        # Retrieve candidate skills for all sub-tasks
+        new_hint_set_skills = []
+        new_hint_names = set()
+        for st in subtasks:
+            st_matches = retriever.retrieve(st, top_k=3)
+            for score, skill in st_matches:
+                if skill and skill["name"] not in new_hint_names:
+                    new_hint_names.add(skill["name"])
+                    new_hint_set_skills.append(skill)
+                    
+        # Calculate Jaccard convergence
+        prev_hint_names = {s["name"] for s in hint_set_skills}
+        union_size = len(new_hint_names.union(prev_hint_names))
+        intersection_size = len(new_hint_names.intersection(prev_hint_names))
+        jaccard = intersection_size / union_size if union_size > 0 else 0.0
+        
+        print(f"[*] Iteration {iteration} | Sub-tasks: {len(subtasks)} | Hint Set Size: {len(new_hint_names)} | Hint Jaccard: {jaccard:.4f}")
+        
+        hint_set_skills = new_hint_set_skills
+        
+        if jaccard == 1.0:
+            converged = True
+            print(f"[+] Hint set stabilized (Jaccard = 1.0) after {iteration} iterations.")
+            break
             
-        retries += 1
+    if not converged:
+        print("[!] Hint set did not fully stabilize, proceeding with last generated hints.")
+
+    # --- Phase 3: Compatibility-Weighted Selection (Eq. 4) ---
+    print("\n[*] Phase 3: Compatibility-Weighted Selection (Eq. 4)...")
+    edges = skill_dag.get("edges", [])
+    
+    alpha = 0.5
+    selected_steps = []
+    preceding_skills = []
+    
+    for i, st in enumerate(subtasks):
+        candidates = retriever.retrieve(st, top_k=3)
+        best_skill = None
+        best_score = -999.0
+        best_sim = 0.0
+        best_rationale = ""
+        
+        for sim_score, skill in candidates:
+            if not skill:
+                continue
+            # Calculate compatibility
+            comp_score = 0.0
+            if i > 0:
+                comp_score = sum(compatibility(prev, skill, edges) for prev in preceding_skills) / i
+                
+            combined_score = alpha * sim_score + (1.0 - alpha) * comp_score
+            if combined_score > best_score:
+                best_score = combined_score
+                best_skill = skill
+                best_sim = sim_score
+                best_rationale = f"Combined score: {combined_score:.3f} (sim: {sim_score:.3f}, comp: {comp_score:.3f})"
+                
+        # Threshold check
+        if best_skill and best_sim >= similarity_threshold:
+            selected_steps.append({
+                "subtask": st,
+                "skill": best_skill["name"],
+                "score": best_sim,
+                "rationale": best_rationale
+            })
+            preceding_skills.append(best_skill)
+        else:
+            fallback_skill_name = "executing-plans"
+            fallback_skill = next((s for s in skill_index["skills"] if s["name"] == fallback_skill_name), None)
+            selected_steps.append({
+                "subtask": st,
+                "skill": fallback_skill_name,
+                "score": 0.0,
+                "rationale": f"Fallback: No candidate passed similarity threshold ({best_sim:.3f} < {similarity_threshold})"
+            })
+            if fallback_skill:
+                preceding_skills.append(fallback_skill)
 
     # Print Final Alignment results
     print("\n[+] Final Skill Alignment:")
-    for st_info in aligned_steps:
-        print(f"  - \"{st_info['subtask']}\" -> [{st_info['skill']}] (score: {st_info['score']:.3f})")
+    for st_info in selected_steps:
+        print(f"  - \"{st_info['subtask']}\" -> [{st_info['skill']}] ({st_info['rationale']})")
 
-    # --- Phase 3: Composition & DAG Ordering ---
-    print("\n[*] Phase 3: Composition & DAG Ordering...")
-    edges = skill_dag.get("edges", [])
-    required_skills = list(set([step["skill"] for step in aligned_steps]))
+    # --- Phase 4: Composition & DAG Ordering ---
+    print("\n[*] Phase 4: Composition & DAG Ordering...")
+    required_skills = list(set([step["skill"] for step in selected_steps]))
     
     # Topological sort
     ordered_skills = []
@@ -456,6 +555,7 @@ Updated Sub-tasks JSON:
 
     def visit(node):
         if node in temp_visited:
+            print(f"[!] Warning: Cycle detected in skill DAG at skill '{node}'!", file=sys.stderr)
             return  # Cycle detected
         if node not in visited:
             temp_visited.add(node)
@@ -472,11 +572,15 @@ Updated Sub-tasks JSON:
         visit(skill)
 
     print("  Composed Execution Plan (DAG Order):")
-    for i, skill in enumerate(ordered_skills):
+    for idx, skill in enumerate(ordered_skills):
         skill_info = next((s for s in skill_index["skills"] if s["name"] == skill), None)
         path = skill_info["path"] if skill_info else "Unknown"
-        print(f"  {i+1}. [{skill}] (Source path: {path})")
+        print(f"  {idx+1}. [{skill}] (Source path: {path})")
 
+    has_real_alignment = any(step["score"] > 0.0 for step in selected_steps)
+    if not has_real_alignment:
+        print("\n[-] Warning: No custom skills were aligned. Only fallback skills used.", file=sys.stderr)
+        
     print("\n[+] Routing completed successfully! Provide this execution plan to your agent to load the respective skills.")
 
 if __name__ == "__main__":
