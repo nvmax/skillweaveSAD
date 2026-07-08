@@ -1,0 +1,236 @@
+﻿{
+  "version": "1.0",
+  "description": "SkillWeave SAD skill index â€” loaded at session start in place of all full SKILL.md files. The agent uses this to perform Iterative Skill-Aware Decomposition (SAD): decompose a task into atomic sub-tasks, match each to a skill here, re-decompose if unmatched, then load only the matched SKILL.md files.",
+  "total_skills": 15,
+  "skills": [
+    {
+      "name": "brainstorming",
+      "description": "Explores user intent and requirements through collaborative dialogue, proposes approaches, and produces an approved design spec before any code is written. Use before any creative work â€” creating features, building components, adding functionality, or modifying behavior.",
+      "triggers": [
+        "new feature", "build", "create", "design", "add functionality",
+        "requirements", "idea", "what should", "how should", "spec",
+        "brainstorm", "explore", "what are the options", "I want to",
+        "let's build", "help me design", "I need a", "start a project"
+      ],
+      "outputs": ["design-spec", "approved-requirements", "architecture-diagram"],
+      "depends_on": [],
+      "next_skills": ["writing-plans"],
+      "atomic": true,
+      "path": "library/brainstorming/SKILL.md",
+      "category": "planning"
+    },
+    {
+      "name": "writing-plans",
+      "description": "Creates a detailed implementation plan from an approved spec, breaking work into bite-sized TDD tasks with file-level detail. Use when you have a spec or requirements for a multi-step task, before touching code.",
+      "triggers": [
+        "write a plan", "implementation plan", "create tasks", "break down",
+        "plan the implementation", "task list", "how to implement",
+        "plan before coding", "implementation steps", "spec to plan"
+      ],
+      "outputs": ["implementation-plan", "task-list"],
+      "depends_on": ["brainstorming"],
+      "next_skills": ["executing-plans", "subagent-driven-development"],
+      "atomic": true,
+      "path": "library/writing-plans/SKILL.md",
+      "category": "planning"
+    },
+    {
+      "name": "executing-plans",
+      "description": "Executes an existing implementation plan task-by-task, using TDD, committing after each passing task. Use when you have an approved plan and need to implement it sequentially.",
+      "triggers": [
+        "execute plan", "run the plan", "implement the plan", "start implementing",
+        "follow the plan", "work through tasks", "execute tasks", "implement tasks",
+        "go ahead", "proceed with implementation", "start coding"
+      ],
+      "outputs": ["working-code", "passing-tests", "commits"],
+      "depends_on": ["writing-plans"],
+      "next_skills": ["verification-before-completion"],
+      "atomic": false,
+      "path": "library/executing-plans/SKILL.md",
+      "category": "implementation"
+    },
+    {
+      "name": "test-driven-development",
+      "description": "Implements features or bug fixes using strict red-green-refactor TDD: write a failing test first, watch it fail, write minimal code to pass, refactor. Never write production code without a failing test first.",
+      "triggers": [
+        "TDD", "test-driven", "write tests", "unit tests", "test first",
+        "bug fix", "fix a bug", "implement feature", "write a function",
+        "add method", "implement", "code", "write code", "test before code",
+        "red green refactor"
+      ],
+      "outputs": ["passing-tests", "minimal-implementation", "commits"],
+      "depends_on": [],
+      "next_skills": ["verification-before-completion"],
+      "atomic": true,
+      "path": "library/test-driven-development/SKILL.md",
+      "category": "implementation"
+    },
+    {
+      "name": "systematic-debugging",
+      "description": "Investigates bugs, test failures, and unexpected behavior by finding the root cause before attempting any fix. Follows a 4-phase process: root cause investigation, pattern analysis, hypothesis testing, and targeted fix.",
+      "triggers": [
+        "bug", "error", "failure", "broken", "not working", "crash",
+        "exception", "fix", "debug", "unexpected behavior", "test failing",
+        "test failure", "build failing", "broken test", "something is wrong",
+        "investigate", "root cause", "diagnose", "why is"
+      ],
+      "outputs": ["root-cause-analysis", "targeted-fix"],
+      "depends_on": [],
+      "next_skills": ["test-driven-development"],
+      "atomic": true,
+      "path": "library/systematic-debugging/SKILL.md",
+      "category": "debugging"
+    },
+    {
+      "name": "subagent-driven-development",
+      "description": "Executes an implementation plan by dispatching fresh subagents per task, each followed by a two-stage review (spec compliance, then code quality). Use when the plan has mostly independent tasks that can be parallelized.",
+      "triggers": [
+        "dispatch subagents", "parallel implementation", "use subagents",
+        "agent-driven", "subagent", "delegate tasks", "parallel tasks",
+        "implement with agents", "autonomous implementation", "concurrent tasks"
+      ],
+      "outputs": ["implemented-plan", "reviewed-code", "commits"],
+      "depends_on": ["writing-plans"],
+      "next_skills": ["finishing-a-development-branch"],
+      "atomic": false,
+      "path": "library/subagent-driven-development/SKILL.md",
+      "category": "implementation"
+    },
+    {
+      "name": "verification-before-completion",
+      "description": "Verifies a deliverable meets all requirements before marking work complete. Covers: tests passing, configuration changes producing correct outcomes, no regressions, and behavioral verification (not just success codes).",
+      "triggers": [
+        "verify", "check", "validate", "before done", "complete",
+        "is it working", "does it work", "confirm", "sign off",
+        "ready for review", "done", "finished", "double-check",
+        "verification", "acceptance criteria"
+      ],
+      "outputs": ["verified-deliverable", "verification-report"],
+      "depends_on": ["executing-plans", "test-driven-development", "subagent-driven-development"],
+      "next_skills": ["finishing-a-development-branch"],
+      "atomic": true,
+      "path": "library/verification-before-completion/SKILL.md",
+      "category": "quality"
+    },
+    {
+      "name": "finishing-a-development-branch",
+      "description": "Wraps up a feature branch: final review, changelog, PR creation, merge. Use after verification passes and the feature is ready to ship.",
+      "triggers": [
+        "finish branch", "merge", "PR", "pull request", "ship", "release",
+        "done with feature", "ready to merge", "create PR", "open PR",
+        "finalize", "wrap up", "branch complete", "ready to ship"
+      ],
+      "outputs": ["merged-branch", "PR", "changelog-entry"],
+      "depends_on": ["verification-before-completion"],
+      "next_skills": [],
+      "atomic": true,
+      "path": "library/finishing-a-development-branch/SKILL.md",
+      "category": "delivery"
+    },
+    {
+      "name": "browser-testing",
+      "description": "Tests web UIs using browser automation: taking screenshots, verifying visual output, interacting with UI elements, and confirming the UI matches the spec. Use when verifying frontend features or UI changes.",
+      "triggers": [
+        "browser test", "UI test", "visual test", "screenshot", "test the UI",
+        "test the frontend", "verify UI", "check the page", "look at the browser",
+        "test web", "e2e browser", "front end testing", "does it look right"
+      ],
+      "outputs": ["screenshot-evidence", "ui-verification-report"],
+      "depends_on": ["executing-plans", "test-driven-development"],
+      "next_skills": ["verification-before-completion"],
+      "atomic": true,
+      "path": "library/browser-testing/SKILL.md",
+      "category": "quality"
+    },
+    {
+      "name": "dispatching-parallel-agents",
+      "description": "Runs multiple independent research or work tasks in parallel using concurrent subagents. Use when tasks have no dependencies on each other and can be done simultaneously to save time.",
+      "triggers": [
+        "parallel", "simultaneously", "at the same time", "concurrent",
+        "multiple agents", "dispatch agents", "in parallel", "run together",
+        "multiple tasks at once", "speed up with agents", "parallel research"
+      ],
+      "outputs": ["parallel-results", "aggregated-output"],
+      "depends_on": [],
+      "next_skills": [],
+      "atomic": true,
+      "path": "library/dispatching-parallel-agents/SKILL.md",
+      "category": "coordination"
+    },
+    {
+      "name": "receiving-code-review",
+      "description": "Guides an agent receiving code review feedback: how to process review comments, respond constructively, and make targeted fixes without scope creep.",
+      "triggers": [
+        "code review feedback", "review comments", "respond to review",
+        "address review", "fix review issues", "PR feedback",
+        "reviewer said", "reviewer asked", "changes requested", "review response"
+      ],
+      "outputs": ["addressed-review", "revised-code"],
+      "depends_on": ["requesting-code-review"],
+      "next_skills": ["verification-before-completion"],
+      "atomic": true,
+      "path": "library/receiving-code-review/SKILL.md",
+      "category": "quality"
+    },
+    {
+      "name": "requesting-code-review",
+      "description": "Prepares and conducts a structured code review: the reviewer reads the diff and files, evaluates spec compliance and code quality, and produces an actionable review report.",
+      "triggers": [
+        "code review", "review my code", "review the implementation",
+        "check my code", "review PR", "review diff", "quality review",
+        "look at the code", "review changes", "check implementation"
+      ],
+      "outputs": ["code-review-report", "review-findings"],
+      "depends_on": ["executing-plans", "test-driven-development"],
+      "next_skills": ["receiving-code-review", "verification-before-completion"],
+      "atomic": true,
+      "path": "library/requesting-code-review/SKILL.md",
+      "category": "quality"
+    },
+    {
+      "name": "using-git-worktrees",
+      "description": "Creates and manages git worktrees for isolated feature development â€” each feature branch gets its own working directory so multiple branches can be active simultaneously without context switching.",
+      "triggers": [
+        "git worktree", "worktree", "isolated branch", "branch isolation",
+        "work on multiple branches", "separate working directory",
+        "feature isolation", "parallel branches", "create worktree"
+      ],
+      "outputs": ["isolated-worktree", "branch-setup"],
+      "depends_on": [],
+      "next_skills": ["executing-plans", "subagent-driven-development"],
+      "atomic": true,
+      "path": "library/using-git-worktrees/SKILL.md",
+      "category": "coordination"
+    },
+    {
+      "name": "using-superpowers",
+      "description": "Entry-point skill that establishes how to find and use all other skills. Invokes the SkillWeave SAD orchestrator to decompose any complex request into atomic sub-tasks, retrieve matching skills, and compose a dependency-ordered execution plan.",
+      "triggers": [
+        "start", "begin", "how do I", "I want to", "help me",
+        "let's", "using superpowers", "what skill", "which skill"
+      ],
+      "outputs": ["skill-invocation-plan"],
+      "depends_on": [],
+      "next_skills": ["skillweave-orchestrator"],
+      "atomic": false,
+      "path": "skills/using-superpowers/SKILL.md",
+      "category": "meta"
+    },
+    {
+      "name": "writing-skills",
+      "description": "Guides the creation of new Superpowers skills: how to structure SKILL.md, write effective trigger descriptions, define dependencies, and ensure the skill is atomic and reusable.",
+      "triggers": [
+        "write a skill", "create a skill", "new skill", "add a skill",
+        "document a skill", "skill template", "SKILL.md", "build a skill",
+        "package a workflow as a skill", "turn this into a skill"
+      ],
+      "outputs": ["new-skill-definition", "SKILL.md"],
+      "depends_on": [],
+      "next_skills": [],
+      "atomic": true,
+      "path": "library/writing-skills/SKILL.md",
+      "category": "meta"
+    }
+  ]
+}
+

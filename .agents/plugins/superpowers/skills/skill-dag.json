@@ -1,0 +1,155 @@
+{
+  "version": "1.0",
+  "description": "SkillWeave SAD Dependency DAG — encodes the Directed Acyclic Graph of skill dependencies. Used by the skillweave-orchestrator to topologically sort a multi-skill plan so skills execute in the correct order, with their prerequisites satisfied.",
+  "edge_types": {
+    "required": "The target skill MUST be executed after the source skill; source output is consumed by target",
+    "alternative": "The target skill is an alternative execution path to another target (either-or)",
+    "concurrent": "The target skill can run alongside other skills with the same source",
+    "optional": "The target skill is a recommended but optional follow-up"
+  },
+  "edges": [
+    {
+      "from": "brainstorming",
+      "to": "writing-plans",
+      "type": "required",
+      "output_consumed": "design-spec",
+      "note": "Always proceed from brainstorming to writing-plans. Do not implement before planning."
+    },
+    {
+      "from": "writing-plans",
+      "to": "executing-plans",
+      "type": "alternative",
+      "output_consumed": "implementation-plan",
+      "note": "Use executing-plans for sequential, tightly-coupled tasks"
+    },
+    {
+      "from": "writing-plans",
+      "to": "subagent-driven-development",
+      "type": "alternative",
+      "output_consumed": "implementation-plan",
+      "note": "Use subagent-driven-development for mostly-independent tasks that benefit from parallel execution"
+    },
+    {
+      "from": "executing-plans",
+      "to": "test-driven-development",
+      "type": "concurrent",
+      "output_consumed": "task",
+      "note": "Each task in the plan uses TDD; these run concurrently per-task"
+    },
+    {
+      "from": "executing-plans",
+      "to": "requesting-code-review",
+      "type": "optional",
+      "output_consumed": "working-code",
+      "note": "Code review after implementation is recommended before verification"
+    },
+    {
+      "from": "executing-plans",
+      "to": "browser-testing",
+      "type": "optional",
+      "output_consumed": "frontend-code",
+      "note": "Required only for frontend/UI work"
+    },
+    {
+      "from": "test-driven-development",
+      "to": "verification-before-completion",
+      "type": "required",
+      "output_consumed": "passing-tests",
+      "note": "After all TDD cycles complete, run full verification"
+    },
+    {
+      "from": "subagent-driven-development",
+      "to": "verification-before-completion",
+      "type": "required",
+      "output_consumed": "implemented-plan",
+      "note": "Verify the entire implementation after all subagents complete"
+    },
+    {
+      "from": "systematic-debugging",
+      "to": "test-driven-development",
+      "type": "required",
+      "output_consumed": "root-cause-analysis",
+      "note": "After finding root cause, fix using TDD to prevent regression"
+    },
+    {
+      "from": "verification-before-completion",
+      "to": "finishing-a-development-branch",
+      "type": "required",
+      "output_consumed": "verified-deliverable",
+      "note": "Only merge/ship after verification passes"
+    },
+    {
+      "from": "requesting-code-review",
+      "to": "receiving-code-review",
+      "type": "required",
+      "output_consumed": "code-review-report",
+      "note": "After review is produced, process the feedback"
+    },
+    {
+      "from": "receiving-code-review",
+      "to": "verification-before-completion",
+      "type": "required",
+      "output_consumed": "addressed-review",
+      "note": "After addressing review feedback, re-verify"
+    },
+    {
+      "from": "browser-testing",
+      "to": "verification-before-completion",
+      "type": "required",
+      "output_consumed": "screenshot-evidence",
+      "note": "Browser test evidence is part of final verification"
+    },
+    {
+      "from": "using-git-worktrees",
+      "to": "executing-plans",
+      "type": "optional",
+      "output_consumed": "isolated-worktree",
+      "note": "Use worktrees when working on multiple features simultaneously"
+    },
+    {
+      "from": "using-git-worktrees",
+      "to": "subagent-driven-development",
+      "type": "optional",
+      "output_consumed": "isolated-worktree",
+      "note": "Worktrees provide clean isolation for subagent execution"
+    }
+  ],
+  "workflows": {
+    "standard_feature": {
+      "description": "Full feature development from idea to merge",
+      "dag_order": [
+        "brainstorming",
+        "writing-plans",
+        "executing-plans | subagent-driven-development",
+        "test-driven-development",
+        "requesting-code-review",
+        "receiving-code-review",
+        "browser-testing (if frontend)",
+        "verification-before-completion",
+        "finishing-a-development-branch"
+      ]
+    },
+    "bug_fix": {
+      "description": "Debug and fix a failing test or unexpected behavior",
+      "dag_order": [
+        "systematic-debugging",
+        "test-driven-development",
+        "verification-before-completion"
+      ]
+    },
+    "quick_implementation": {
+      "description": "Implement from existing spec/plan",
+      "dag_order": [
+        "executing-plans | subagent-driven-development",
+        "test-driven-development",
+        "verification-before-completion"
+      ]
+    },
+    "parallel_research": {
+      "description": "Gather information from multiple sources concurrently",
+      "dag_order": [
+        "dispatching-parallel-agents"
+      ]
+    }
+  }
+}
