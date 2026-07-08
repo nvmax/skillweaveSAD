@@ -1,11 +1,18 @@
 ---
 name: docs-architect
-description: Creates comprehensive technical documentation from existing
-  codebases. Analyzes architecture, design patterns, and implementation details
-  to produce long-form technical manuals and ebooks. Use PROACTIVELY for system
-  documentation, architecture guides, or technical deep-dives.
-metadata:
-  model: sonnet
+description: "Creates comprehensive technical documentation from existing"
+triggers:
+  - "docs-architect"
+  - "docs architect"
+  - "creates"
+  - "comprehensive"
+  - "technical"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: planning
 ---
 
 ## Use this skill when

@@ -1,6 +1,18 @@
 ---
 name: security-requirement-extraction
-description: Derive security requirements from threat models and business context. Use when translating threats into actionable requirements, creating security user stories, or building security test cases.
+description: "Derive security requirements from threat models and business context. Use when translating threats into actionable requirements, creating security user stories, or building security test cases."
+triggers:
+  - "security-requirement-extraction"
+  - "security requirement extraction"
+  - "derive"
+  - "security"
+  - "requirements"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # Security Requirement Extraction

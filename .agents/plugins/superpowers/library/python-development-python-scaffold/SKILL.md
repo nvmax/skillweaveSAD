@@ -1,6 +1,18 @@
 ---
 name: python-development-python-scaffold
 description: "You are a Python project architecture expert specializing in scaffolding production-ready Python applications. Generate complete project structures with modern tooling (uv, FastAPI, Django), type hint"
+triggers:
+  - "python-development-python-scaffold"
+  - "python development python scaffold"
+  - "python"
+  - "project"
+  - "architecture"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # Python Project Scaffolding

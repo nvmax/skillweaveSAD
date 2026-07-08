@@ -1,8 +1,18 @@
 ---
 name: conductor-revert
-description: Git-aware undo by logical work unit (track, phase, or task)
-metadata:
-  argument-hint: "[track-id | track-id:phase | track-id:task]"
+description: "Git-aware undo by logical work unit (track, phase, or task)"
+triggers:
+  - "conductor-revert"
+  - "conductor revert"
+  - "git-aware"
+  - "logical"
+  - "track"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: debugging
 ---
 
 # Revert Track

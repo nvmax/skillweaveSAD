@@ -1,6 +1,18 @@
 ---
 name: data-engineering-data-pipeline
 description: "You are a data pipeline architecture expert specializing in scalable, reliable, and cost-effective data pipelines for batch and streaming data processing."
+triggers:
+  - "data-engineering-data-pipeline"
+  - "data engineering data pipeline"
+  - "pipeline"
+  - "architecture"
+  - "expert"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: delivery
 ---
 
 # Data Pipeline Architecture

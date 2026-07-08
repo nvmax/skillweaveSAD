@@ -1,11 +1,18 @@
 ---
 name: prompt-engineer
-description: Expert prompt engineer specializing in advanced prompting
-  techniques, LLM optimization, and AI system design. Masters chain-of-thought,
-  constitutional AI, and production prompt strategies. Use when building AI
-  features, improving agent performance, or crafting system prompts.
-metadata:
-  model: inherit
+description: "Expert prompt engineer specializing in advanced prompting"
+triggers:
+  - "prompt-engineer"
+  - "prompt engineer"
+  - "expert"
+  - "prompt"
+  - "engineer"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 ## Use this skill when

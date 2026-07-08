@@ -1,8 +1,18 @@
 ---
 name: conductor-implement
-description: Execute tasks from a track's implementation plan following TDD workflow
-metadata:
-  argument-hint: "[track-id] [--task X.Y] [--phase N]"
+description: "Execute tasks from a track's implementation plan following TDD workflow"
+triggers:
+  - "conductor-implement"
+  - "conductor implement"
+  - "execute"
+  - "tasks"
+  - "tracks"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: meta
 ---
 
 # Implement Track

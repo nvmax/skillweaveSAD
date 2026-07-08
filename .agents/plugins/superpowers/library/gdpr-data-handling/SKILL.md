@@ -1,6 +1,18 @@
 ---
 name: gdpr-data-handling
-description: Implement GDPR-compliant data handling with consent management, data subject rights, and privacy by design. Use when building systems that process EU personal data, implementing privacy controls, or conducting GDPR compliance reviews.
+description: "Implement GDPR-compliant data handling with consent management, data subject rights, and privacy by design. Use when building systems that process EU personal data, implementing privacy controls, or conducting GDPR compliance reviews."
+triggers:
+  - "gdpr-data-handling"
+  - "gdpr data handling"
+  - "implement"
+  - "gdpr-compliant"
+  - "handling"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # GDPR Data Handling

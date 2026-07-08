@@ -1,6 +1,18 @@
 ---
 name: frontend-mobile-development-component-scaffold
 description: "You are a React component architecture expert specializing in scaffolding production-ready, accessible, and performant components. Generate complete component implementations with TypeScript, tests, s"
+triggers:
+  - "frontend-mobile-development-component-scaffold"
+  - "frontend mobile development component scaffold"
+  - "react"
+  - "component"
+  - "architecture"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # React/React Native Component Scaffolding

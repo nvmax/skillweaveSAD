@@ -1,11 +1,18 @@
 ---
 name: cpp-pro
-description: Write idiomatic C++ code with modern features, RAII, smart
-  pointers, and STL algorithms. Handles templates, move semantics, and
-  performance optimization. Use PROACTIVELY for C++ refactoring, memory safety,
-  or complex C++ patterns.
-metadata:
-  model: opus
+description: "Write idiomatic C++ code with modern features, RAII, smart"
+triggers:
+  - "cpp-pro"
+  - "cpp pro"
+  - "idiomatic"
+  - "modern"
+  - "features"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 ## Use this skill when

@@ -1,6 +1,18 @@
 ---
 name: context-management-context-save
 description: "Use when working with context management context save"
+triggers:
+  - "context-management-context-save"
+  - "context management context save"
+  - "working"
+  - "context"
+  - "management"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # Context Save Tool: Intelligent Context Management Specialist

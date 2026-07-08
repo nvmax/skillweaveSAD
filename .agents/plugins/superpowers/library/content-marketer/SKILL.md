@@ -1,12 +1,18 @@
 ---
 name: content-marketer
-description: Elite content marketing strategist specializing in AI-powered
-  content creation, omnichannel distribution, SEO optimization, and data-driven
-  performance marketing. Masters modern content tools, social media automation,
-  and conversion optimization with 2024/2025 best practices. Use PROACTIVELY for
-  comprehensive content marketing.
-metadata:
-  model: haiku
+description: "Elite content marketing strategist specializing in AI-powered"
+triggers:
+  - "content-marketer"
+  - "content marketer"
+  - "elite"
+  - "content"
+  - "marketing"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 ## Use this skill when

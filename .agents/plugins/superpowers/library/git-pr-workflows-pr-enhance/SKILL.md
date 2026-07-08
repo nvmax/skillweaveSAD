@@ -1,6 +1,18 @@
 ---
 name: git-pr-workflows-pr-enhance
 description: "You are a PR optimization expert specializing in creating high-quality pull requests that facilitate efficient code reviews. Generate comprehensive PR descriptions, automate review processes, and ensu"
+triggers:
+  - "git-pr-workflows-pr-enhance"
+  - "git pr workflows pr enhance"
+  - "optimization"
+  - "expert"
+  - "specializing"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # Pull Request Enhancement

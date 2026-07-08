@@ -1,6 +1,18 @@
 ---
 name: python-testing-patterns
-description: Implement comprehensive testing strategies with pytest, fixtures, mocking, and test-driven development. Use when writing Python tests, setting up test suites, or implementing testing best practices.
+description: "Implement comprehensive testing strategies with pytest, fixtures, mocking, and test-driven development. Use when writing Python tests, setting up test suites, or implementing testing best practices."
+triggers:
+  - "python-testing-patterns"
+  - "python testing patterns"
+  - "implement"
+  - "comprehensive"
+  - "testing"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: quality
 ---
 
 # Python Testing Patterns

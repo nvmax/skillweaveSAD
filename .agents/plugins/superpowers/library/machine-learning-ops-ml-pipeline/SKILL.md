@@ -1,6 +1,18 @@
 ---
 name: machine-learning-ops-ml-pipeline
 description: "Design and implement a complete ML pipeline for: $ARGUMENTS"
+triggers:
+  - "machine-learning-ops-ml-pipeline"
+  - "machine learning ops ml pipeline"
+  - "design"
+  - "implement"
+  - "complete"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: delivery
 ---
 
 # Machine Learning Pipeline - Multi-Agent MLOps Orchestration

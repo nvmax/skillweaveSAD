@@ -1,6 +1,18 @@
 ---
 name: code-documentation-doc-generate
 description: "You are a documentation expert specializing in creating comprehensive, maintainable documentation from code. Generate API docs, architecture diagrams, user guides, and technical references using AI-powered analysis and industry best practices."
+triggers:
+  - "code-documentation-doc-generate"
+  - "code documentation doc generate"
+  - "documentation"
+  - "expert"
+  - "specializing"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # Automated Documentation Generation

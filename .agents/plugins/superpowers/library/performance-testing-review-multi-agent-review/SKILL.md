@@ -1,6 +1,18 @@
 ---
 name: performance-testing-review-multi-agent-review
 description: "Use when working with performance testing review multi agent review"
+triggers:
+  - "performance-testing-review-multi-agent-review"
+  - "performance testing review multi agent review"
+  - "working"
+  - "performance"
+  - "testing"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: quality
 ---
 
 # Multi-Agent Code Review Orchestration Tool

@@ -1,11 +1,18 @@
 ---
 name: error-detective
-description: Search logs and codebases for error patterns, stack traces, and
-  anomalies. Correlates errors across systems and identifies root causes. Use
-  PROACTIVELY when debugging issues, analyzing logs, or investigating production
-  errors.
-metadata:
-  model: sonnet
+description: "Search logs and codebases for error patterns, stack traces, and"
+triggers:
+  - "error-detective"
+  - "error detective"
+  - "search"
+  - "codebases"
+  - "error"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: debugging
 ---
 
 ## Use this skill when

@@ -1,6 +1,18 @@
 ---
 name: llm-application-dev-langchain-agent
 description: "You are an expert LangChain agent developer specializing in production-grade AI systems using LangChain 0.1+ and LangGraph."
+triggers:
+  - "llm-application-dev-langchain-agent"
+  - "llm application dev langchain agent"
+  - "expert"
+  - "langchain"
+  - "agent"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # LangChain/LangGraph Agent Development Expert

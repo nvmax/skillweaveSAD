@@ -2,7 +2,7 @@
   "skills": [
     {
       "name": "ai-engineer",
-      "description": "Build production-ready LLM applications, advanced RAG systems, and intelligent agents. Implements vector search, multimodal AI, agent orchestration, and enterprise AI integrations. Use PROACTIVELY for LLM features, chatbots, AI agents, or AI-powered applications.",
+      "description": "Build production-ready LLM applications, advanced RAG systems, and",
       "triggers": [
         "ai-engineer",
         "ai engineer",
@@ -11,10 +11,10 @@
         "advanced"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/ai-engineer/SKILL.md",
       "category": "implementation"
@@ -30,10 +30,10 @@
         "obfuscation"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/anti-reversing-techniques/SKILL.md",
       "category": "implementation"
@@ -49,17 +49,17 @@
         "design"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/api-design-principles/SKILL.md",
       "category": "planning"
     },
     {
       "name": "api-documenter",
-      "description": "Master API documentation with OpenAPI 3.1, AI-powered tools, and modern developer experience practices. Create interactive docs, generate SDKs, and build comprehensive developer portals. Use PROACTIVELY for API documentation or developer portal creation.",
+      "description": "Master API documentation with OpenAPI 3.1, AI-powered tools, and",
       "triggers": [
         "api-documenter",
         "api documenter",
@@ -68,10 +68,10 @@
         "openapi"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/api-documenter/SKILL.md",
       "category": "implementation"
@@ -87,10 +87,10 @@
         "specializing"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/api-testing-observability-api-mock/SKILL.md",
       "category": "quality"
@@ -106,17 +106,17 @@
         "application"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/application-performance-performance-optimization/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "architect-review",
-      "description": "Master software architect specializing in modern architecture patterns, clean architecture, microservices, event-driven systems, and DDD. Reviews system designs and code changes for architectural integrity, scalability, and maintainability. Use PROACTIVELY for architectural decisions.",
+      "description": "Master software architect specializing in modern architecture",
       "triggers": [
         "architect-review",
         "architect review",
@@ -125,10 +125,10 @@
         "architect"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/architect-review/SKILL.md",
       "category": "planning"
@@ -144,10 +144,10 @@
         "decision"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/architecture-decision-records/SKILL.md",
       "category": "planning"
@@ -163,10 +163,10 @@
         "backend"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/architecture-patterns/SKILL.md",
       "category": "planning"
@@ -182,10 +182,10 @@
         "asyncio"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/async-python-patterns/SKILL.md",
       "category": "implementation"
@@ -201,10 +201,10 @@
         "trees"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/attack-tree-construction/SKILL.md",
       "category": "implementation"
@@ -220,17 +220,17 @@
         "authorization"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/auth-implementation-patterns/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "backend-architect",
-      "description": "Expert backend architect specializing in scalable API design, microservices architecture, and distributed systems. Masters REST/GraphQL/gRPC APIs, event-driven architectures, service mesh patterns, and modern backend frameworks. Handles service boundary definition, inter-service communication, resilience patterns, and observability. Use PROACTIVELY when creating new backend services or APIs.",
+      "description": "Expert backend architect specializing in scalable API design,",
       "triggers": [
         "backend-architect",
         "backend architect",
@@ -239,10 +239,10 @@
         "architect"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/backend-architect/SKILL.md",
       "category": "planning"
@@ -258,17 +258,17 @@
         "backend"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/backend-development-feature-development/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "backend-security-coder",
-      "description": "Expert in secure backend coding practices specializing in input validation, authentication, and API security. Use PROACTIVELY for backend security implementations or security code reviews.",
+      "description": "Expert in secure backend coding practices specializing in input",
       "triggers": [
         "backend-security-coder",
         "backend security coder",
@@ -277,10 +277,10 @@
         "backend"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/backend-security-coder/SKILL.md",
       "category": "implementation"
@@ -296,10 +296,10 @@
         "systems"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/backtesting-frameworks/SKILL.md",
       "category": "quality"
@@ -315,10 +315,10 @@
         "systems"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/billing-automation/SKILL.md",
       "category": "delivery"
@@ -398,10 +398,10 @@
         "generation"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/changelog-automation/SKILL.md",
       "category": "delivery"
@@ -417,17 +417,17 @@
         "expert"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/cicd-automation-workflow-automate/SKILL.md",
       "category": "delivery"
     },
     {
       "name": "cloud-architect",
-      "description": "Expert cloud architect specializing in AWS/Azure/GCP multi-cloud infrastructure design, advanced IaC (Terraform/OpenTofu/CDK), FinOps cost optimization, and modern architectural patterns. Masters serverless, microservices, security, compliance, and disaster recovery. Use PROACTIVELY for cloud architecture, cost optimization, migration planning, or multi-cloud strategies.",
+      "description": "Expert cloud architect specializing in AWS/Azure/GCP multi-cloud",
       "triggers": [
         "cloud-architect",
         "cloud architect",
@@ -436,10 +436,10 @@
         "architect"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/cloud-architect/SKILL.md",
       "category": "planning"
@@ -455,10 +455,10 @@
         "specializing"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/code-documentation-code-explain/SKILL.md",
       "category": "implementation"
@@ -474,10 +474,10 @@
         "specializing"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/code-documentation-doc-generate/SKILL.md",
       "category": "implementation"
@@ -493,10 +493,10 @@
         "context"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/code-refactoring-context-restore/SKILL.md",
       "category": "implementation"
@@ -512,10 +512,10 @@
         "specializing"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/code-refactoring-refactor-clean/SKILL.md",
       "category": "implementation"
@@ -531,10 +531,10 @@
         "specializing"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/code-refactoring-tech-debt/SKILL.md",
       "category": "implementation"
@@ -550,10 +550,10 @@
         "review"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/code-review-ai-ai-review/SKILL.md",
       "category": "quality"
@@ -569,17 +569,17 @@
         "review"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/code-review-excellence/SKILL.md",
       "category": "quality"
     },
     {
       "name": "code-reviewer",
-      "description": "Elite code review expert specializing in modern AI-powered code analysis, security vulnerabilities, performance optimization, and production reliability. Masters static analysis tools, security scanning, and configuration review with 2024/2025 best practices. Use PROACTIVELY for code quality assurance.",
+      "description": "Elite code review expert specializing in modern AI-powered code",
       "triggers": [
         "code-reviewer",
         "code reviewer",
@@ -588,10 +588,10 @@
         "expert"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/code-reviewer/SKILL.md",
       "category": "quality"
@@ -607,10 +607,10 @@
         "expert"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/codebase-cleanup-deps-audit/SKILL.md",
       "category": "quality"
@@ -626,10 +626,10 @@
         "specializing"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/codebase-cleanup-refactor-clean/SKILL.md",
       "category": "implementation"
@@ -645,10 +645,10 @@
         "specializing"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/codebase-cleanup-tech-debt/SKILL.md",
       "category": "implementation"
@@ -664,10 +664,10 @@
         "tracks"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/conductor-implement/SKILL.md",
       "category": "meta"
@@ -683,10 +683,10 @@
         "lifecycle"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/conductor-manage/SKILL.md",
       "category": "meta"
@@ -702,10 +702,10 @@
         "specification"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/conductor-new-track/SKILL.md",
       "category": "meta"
@@ -721,17 +721,17 @@
         "track"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/conductor-revert/SKILL.md",
       "category": "debugging"
     },
     {
       "name": "conductor-setup",
-      "description": "Initialize project with Conductor artifacts (product definition, tech stack, workflow, style guides)",
+      "description": "Initialize project with Conductor artifacts (product definition,",
       "triggers": [
         "conductor-setup",
         "conductor setup",
@@ -740,10 +740,10 @@
         "conductor"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/conductor-setup/SKILL.md",
       "category": "meta"
@@ -759,17 +759,17 @@
         "status"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/conductor-status/SKILL.md",
       "category": "meta"
     },
     {
       "name": "conductor-validator",
-      "description": "Validates Conductor project artifacts for completeness, consistency, and correctness. Use after setup, when diagnosing issues, or before implementation to verify project context.",
+      "description": "Validates Conductor project artifacts for completeness,",
       "triggers": [
         "conductor-validator",
         "conductor validator",
@@ -778,17 +778,17 @@
         "project"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/conductor-validator/SKILL.md",
       "category": "quality"
     },
     {
       "name": "content-marketer",
-      "description": "Elite content marketing strategist specializing in AI-powered content creation, omnichannel distribution, SEO optimization, and data-driven performance marketing. Masters modern content tools, social media automation, and conversion optimization with 2024/2025 best practices. Use PROACTIVELY for comprehensive content marketing.",
+      "description": "Elite content marketing strategist specializing in AI-powered",
       "triggers": [
         "content-marketer",
         "content marketer",
@@ -797,17 +797,17 @@
         "marketing"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/content-marketer/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "context-driven-development",
-      "description": "Use this skill when working with Conductor's context-driven development methodology, managing project context artifacts, or understanding the relationship between product.md, tech-stack.md, and workflow.md files.",
+      "description": "Use this skill when working with Conductor's context-driven",
       "triggers": [
         "context-driven-development",
         "context driven development",
@@ -816,10 +816,10 @@
         "conductors"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/context-driven-development/SKILL.md",
       "category": "implementation"
@@ -835,10 +835,10 @@
         "management"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/context-management-context-restore/SKILL.md",
       "category": "implementation"
@@ -854,17 +854,17 @@
         "management"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/context-management-context-save/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "context-manager",
-      "description": "Elite AI context engineering specialist mastering dynamic context management, vector databases, knowledge graphs, and intelligent memory systems. Orchestrates context across multi-agent workflows, enterprise AI systems, and long-running projects with 2024/2025 best practices. Use PROACTIVELY for complex AI orchestration.",
+      "description": "Elite AI context engineering specialist mastering dynamic context",
       "triggers": [
         "context-manager",
         "context manager",
@@ -873,10 +873,10 @@
         "engineering"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/context-manager/SKILL.md",
       "category": "implementation"
@@ -892,17 +892,17 @@
         "costs"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/cost-optimization/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "cpp-pro",
-      "description": "Write idiomatic C++ code with modern features, RAII, smart pointers, and STL algorithms. Handles templates, move semantics, and performance optimization. Use PROACTIVELY for C++ refactoring, memory safety, or complex C++ patterns.",
+      "description": "Write idiomatic C++ code with modern features, RAII, smart",
       "triggers": [
         "cpp-pro",
         "cpp pro",
@@ -911,10 +911,10 @@
         "features"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/cpp-pro/SKILL.md",
       "category": "implementation"
@@ -930,17 +930,17 @@
         "query"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/cqrs-implementation/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "csharp-pro",
-      "description": "Write modern C# code with advanced features like records, pattern matching, and async/await. Optimizes .NET applications, implements enterprise patterns, and ensures comprehensive testing. Use PROACTIVELY for C# refactoring, performance optimization, or complex .NET solutions.",
+      "description": "Write modern C# code with advanced features like records, pattern",
       "triggers": [
         "csharp-pro",
         "csharp pro",
@@ -949,17 +949,17 @@
         "features"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/csharp-pro/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "data-engineer",
-      "description": "Build scalable data pipelines, modern data warehouses, and real-time streaming architectures. Implements Apache Spark, dbt, Airflow, and cloud-native data platforms. Use PROACTIVELY for data pipeline design, analytics infrastructure, or modern data stack implementation.",
+      "description": "Build scalable data pipelines, modern data warehouses, and",
       "triggers": [
         "data-engineer",
         "data engineer",
@@ -968,10 +968,10 @@
         "modern"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/data-engineer/SKILL.md",
       "category": "implementation"
@@ -987,10 +987,10 @@
         "insights"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/data-engineering-data-driven-feature/SKILL.md",
       "category": "implementation"
@@ -1006,10 +1006,10 @@
         "expert"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/data-engineering-data-pipeline/SKILL.md",
       "category": "delivery"
@@ -1025,17 +1025,17 @@
         "validation"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/data-quality-frameworks/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "data-scientist",
-      "description": "Expert data scientist for advanced analytics, machine learning, and statistical modeling. Handles complex data analysis, predictive modeling, and business intelligence. Use PROACTIVELY for data analysis tasks, ML modeling, statistical analysis, and data-driven insights.",
+      "description": "Expert data scientist for advanced analytics, machine learning, and",
       "triggers": [
         "data-scientist",
         "data scientist",
@@ -1044,10 +1044,10 @@
         "advanced"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/data-scientist/SKILL.md",
       "category": "implementation"
@@ -1063,17 +1063,17 @@
         "narratives"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/data-storytelling/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "database-admin",
-      "description": "Expert database administrator specializing in modern cloud databases, automation, and reliability engineering. Masters AWS/Azure/GCP database services, Infrastructure as Code, high availability, disaster recovery, performance optimization, and compliance. Handles multi-cloud strategies, container databases, and cost optimization. Use PROACTIVELY for database architecture, operations, or reliability engineering.",
+      "description": "Expert database administrator specializing in modern cloud",
       "triggers": [
         "database-admin",
         "database admin",
@@ -1082,17 +1082,17 @@
         "administrator"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/database-admin/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "database-architect",
-      "description": "Expert database architect specializing in data layer design from scratch, technology selection, schema modeling, and scalable database architectures. Masters SQL/NoSQL/TimeSeries database selection, normalization strategies, migration planning, and performance-first design. Handles both greenfield architectures and re-architecture of existing systems. Use PROACTIVELY for database architecture, technology selection, or data modeling decisions.",
+      "description": "Expert database architect specializing in data layer design from",
       "triggers": [
         "database-architect",
         "database architect",
@@ -1101,10 +1101,10 @@
         "architect"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/database-architect/SKILL.md",
       "category": "planning"
@@ -1120,10 +1120,10 @@
         "expert"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/database-cloud-optimization-cost-optimize/SKILL.md",
       "category": "implementation"
@@ -1139,10 +1139,10 @@
         "migrations"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/database-migration/SKILL.md",
       "category": "implementation"
@@ -1158,17 +1158,17 @@
         "observability"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/database-migrations-migration-observability/SKILL.md",
       "category": "quality"
     },
     {
       "name": "database-migrations-sql-migrations",
-      "description": "SQL database migrations with zero-downtime strategies for PostgreSQL, MySQL, SQL Server",
+      "description": "SQL database migrations with zero-downtime strategies for",
       "triggers": [
         "database-migrations-sql-migrations",
         "database migrations sql migrations",
@@ -1177,17 +1177,17 @@
         "zero-downtime"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/database-migrations-sql-migrations/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "database-optimizer",
-      "description": "Expert database optimizer specializing in modern performance tuning, query optimization, and scalable architectures. Masters advanced indexing, N+1 resolution, multi-tier caching, partitioning strategies, and cloud database optimization. Handles complex query analysis, migration strategies, and performance monitoring. Use PROACTIVELY for database optimization, performance issues, or scalability challenges.",
+      "description": "Expert database optimizer specializing in modern performance",
       "triggers": [
         "database-optimizer",
         "database optimizer",
@@ -1196,17 +1196,17 @@
         "optimizer"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/database-optimizer/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "debugger",
-      "description": "Debugging specialist for errors, test failures, and unexpected behavior. Use proactively when encountering any issues.",
+      "description": "Debugging specialist for errors, test failures, and unexpected",
       "triggers": [
         "debugger",
         "debugger",
@@ -1215,10 +1215,10 @@
         "errors"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/debugger/SKILL.md",
       "category": "debugging"
@@ -1234,10 +1234,10 @@
         "debugging"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/debugging-strategies/SKILL.md",
       "category": "debugging"
@@ -1253,10 +1253,10 @@
         "toolkit"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/debugging-toolkit-smart-debug/SKILL.md",
       "category": "debugging"
@@ -1272,10 +1272,10 @@
         "production-ready"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/defi-protocol-templates/SKILL.md",
       "category": "implementation"
@@ -1291,10 +1291,10 @@
         "expert"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/dependency-management-deps-audit/SKILL.md",
       "category": "quality"
@@ -1310,17 +1310,17 @@
         "dependency"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/dependency-upgrade/SKILL.md",
       "category": "delivery"
     },
     {
       "name": "deployment-engineer",
-      "description": "Expert deployment engineer specializing in modern CI/CD pipelines, GitOps workflows, and advanced deployment automation. Masters GitHub Actions, ArgoCD/Flux, progressive delivery, container security, and platform engineering. Handles zero-downtime deployments, security scanning, and developer experience optimization. Use PROACTIVELY for CI/CD design, GitOps implementation, or deployment automation.",
+      "description": "Expert deployment engineer specializing in modern CI/CD pipelines,",
       "triggers": [
         "deployment-engineer",
         "deployment engineer",
@@ -1329,10 +1329,10 @@
         "engineer"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/deployment-engineer/SKILL.md",
       "category": "delivery"
@@ -1348,10 +1348,10 @@
         "pipelines"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/deployment-pipeline-design/SKILL.md",
       "category": "planning"
@@ -1367,17 +1367,17 @@
         "expert"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/deployment-validation-config-validate/SKILL.md",
       "category": "delivery"
     },
     {
       "name": "devops-troubleshooter",
-      "description": "Expert DevOps troubleshooter specializing in rapid incident response, advanced debugging, and modern observability. Masters log analysis, distributed tracing, Kubernetes debugging, performance optimization, and root cause analysis. Handles production outages, system reliability, and preventive monitoring. Use PROACTIVELY for debugging, incident response, or system troubleshooting.",
+      "description": "Expert DevOps troubleshooter specializing in rapid incident",
       "triggers": [
         "devops-troubleshooter",
         "devops troubleshooter",
@@ -1386,10 +1386,10 @@
         "troubleshooter"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/devops-troubleshooter/SKILL.md",
       "category": "debugging"
@@ -1431,10 +1431,10 @@
         "specializing"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/distributed-debugging-debug-trace/SKILL.md",
       "category": "debugging"
@@ -1450,17 +1450,17 @@
         "tracing"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/distributed-tracing/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "django-pro",
-      "description": "Master Django 5.x with async views, DRF, Celery, and Django Channels. Build scalable web applications with proper architecture, testing, and deployment. Use PROACTIVELY for Django development, ORM optimization, or complex Django patterns.",
+      "description": "Master Django 5.x with async views, DRF, Celery, and Django",
       "triggers": [
         "django-pro",
         "django pro",
@@ -1469,17 +1469,17 @@
         "async"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/django-pro/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "docs-architect",
-      "description": "Creates comprehensive technical documentation from existing codebases. Analyzes architecture, design patterns, and implementation details to produce long-form technical manuals and ebooks. Use PROACTIVELY for system documentation, architecture guides, or technical deep-dives.",
+      "description": "Creates comprehensive technical documentation from existing",
       "triggers": [
         "docs-architect",
         "docs architect",
@@ -1488,10 +1488,10 @@
         "technical"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/docs-architect/SKILL.md",
       "category": "planning"
@@ -1507,17 +1507,17 @@
         "specializing"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/documentation-generation-doc-generate/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "dotnet-architect",
-      "description": "Expert .NET backend architect specializing in C#, ASP.NET Core, Entity Framework, Dapper, and enterprise application patterns. Masters async/await, dependency injection, caching strategies, and performance optimization. Use PROACTIVELY for .NET API development, code review, or architecture decisions.",
+      "description": "Expert .NET backend architect specializing in C#, ASP.NET Core,",
       "triggers": [
         "dotnet-architect",
         "dotnet architect",
@@ -1526,10 +1526,10 @@
         "architect"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/dotnet-architect/SKILL.md",
       "category": "planning"
@@ -1545,17 +1545,17 @@
         "development"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/dotnet-backend-patterns/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "dx-optimizer",
-      "description": "Developer Experience specialist. Improves tooling, setup, and workflows. Use PROACTIVELY when setting up new projects, after team feedback, or when development friction is noticed.",
+      "description": "Developer Experience specialist. Improves tooling, setup, and",
       "triggers": [
         "dx-optimizer",
         "dx optimizer",
@@ -1564,10 +1564,10 @@
         "specialist"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/dx-optimizer/SKILL.md",
       "category": "implementation"
@@ -1583,10 +1583,10 @@
         "embedding"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/embedding-strategies/SKILL.md",
       "category": "implementation"
@@ -1602,10 +1602,10 @@
         "contracts"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/employment-contract-templates/SKILL.md",
       "category": "implementation"
@@ -1621,10 +1621,10 @@
         "analysis"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/error-debugging-error-analysis/SKILL.md",
       "category": "debugging"
@@ -1640,10 +1640,10 @@
         "observability"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/error-debugging-error-trace/SKILL.md",
       "category": "debugging"
@@ -1659,17 +1659,17 @@
         "debugging"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/error-debugging-multi-agent-review/SKILL.md",
       "category": "debugging"
     },
     {
       "name": "error-detective",
-      "description": "Search logs and codebases for error patterns, stack traces, and anomalies. Correlates errors across systems and identifies root causes. Use PROACTIVELY when debugging issues, analyzing logs, or investigating production errors.",
+      "description": "Search logs and codebases for error patterns, stack traces, and",
       "triggers": [
         "error-detective",
         "error detective",
@@ -1678,10 +1678,10 @@
         "error"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/error-detective/SKILL.md",
       "category": "debugging"
@@ -1697,10 +1697,10 @@
         "analysis"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/error-diagnostics-error-analysis/SKILL.md",
       "category": "debugging"
@@ -1716,10 +1716,10 @@
         "observability"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/error-diagnostics-error-trace/SKILL.md",
       "category": "debugging"
@@ -1735,10 +1735,10 @@
         "diagnostics"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/error-diagnostics-smart-debug/SKILL.md",
       "category": "debugging"
@@ -1754,10 +1754,10 @@
         "handling"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/error-handling-patterns/SKILL.md",
       "category": "debugging"
@@ -1773,10 +1773,10 @@
         "sourcing"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/event-sourcing-architect/SKILL.md",
       "category": "planning"
@@ -1792,10 +1792,10 @@
         "event"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/event-store-design/SKILL.md",
       "category": "planning"
@@ -1832,7 +1832,7 @@
     },
     {
       "name": "fastapi-pro",
-      "description": "Build high-performance async APIs with FastAPI, SQLAlchemy 2.0, and Pydantic V2. Master microservices, WebSockets, and modern Python async patterns. Use PROACTIVELY for FastAPI development, async optimization, or API architecture.",
+      "description": "Build high-performance async APIs with FastAPI, SQLAlchemy 2.0, and",
       "triggers": [
         "fastapi-pro",
         "fastapi pro",
@@ -1841,10 +1841,10 @@
         "fastapi"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/fastapi-pro/SKILL.md",
       "category": "implementation"
@@ -1860,10 +1860,10 @@
         "fastapi"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/fastapi-templates/SKILL.md",
       "category": "implementation"
@@ -1902,7 +1902,7 @@
     },
     {
       "name": "firmware-analyst",
-      "description": "Expert firmware analyst specializing in embedded systems, IoT security, and hardware reverse engineering. Masters firmware extraction, analysis, and vulnerability research for routers, IoT devices, automotive systems, and industrial controllers. Use PROACTIVELY for firmware security audits, IoT penetration testing, or embedded systems research.",
+      "description": "Expert firmware analyst specializing in embedded systems, IoT",
       "triggers": [
         "firmware-analyst",
         "firmware analyst",
@@ -1911,17 +1911,17 @@
         "analyst"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/firmware-analyst/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "flutter-expert",
-      "description": "Master Flutter development with Dart 3, advanced widgets, and multi-platform deployment. Handles state management, animations, testing, and performance optimization for mobile, web, desktop, and embedded platforms. Use PROACTIVELY for Flutter architecture, UI implementation, or cross-platform features.",
+      "description": "Master Flutter development with Dart 3, advanced widgets, and",
       "triggers": [
         "flutter-expert",
         "flutter expert",
@@ -1930,10 +1930,10 @@
         "development"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/flutter-expert/SKILL.md",
       "category": "implementation"
@@ -1949,10 +1949,10 @@
         "specializing"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/framework-migration-code-migrate/SKILL.md",
       "category": "implementation"
@@ -1968,10 +1968,10 @@
         "expert"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/framework-migration-deps-upgrade/SKILL.md",
       "category": "delivery"
@@ -1987,17 +1987,17 @@
         "legacy"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/framework-migration-legacy-modernize/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "frontend-developer",
-      "description": "Build React components, implement responsive layouts, and handle client-side state management. Masters React 19, Next.js 15, and modern frontend architecture. Optimizes performance and ensures accessibility. Use PROACTIVELY when creating UI components or fixing frontend issues.",
+      "description": "Build React components, implement responsive layouts, and handle",
       "triggers": [
         "frontend-developer",
         "frontend developer",
@@ -2006,10 +2006,10 @@
         "implement"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/frontend-developer/SKILL.md",
       "category": "implementation"
@@ -2025,10 +2025,10 @@
         "architecture"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/frontend-mobile-development-component-scaffold/SKILL.md",
       "category": "implementation"
@@ -2044,17 +2044,17 @@
         "specialist"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/frontend-mobile-security-xss-scan/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "frontend-security-coder",
-      "description": "Expert in secure frontend coding practices specializing in XSS prevention, output sanitization, and client-side security patterns. Use PROACTIVELY for frontend security implementations or client-side security code reviews.",
+      "description": "Expert in secure frontend coding practices specializing in XSS",
       "triggers": [
         "frontend-security-coder",
         "frontend security coder",
@@ -2063,10 +2063,10 @@
         "frontend"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/frontend-security-coder/SKILL.md",
       "category": "implementation"
@@ -2082,10 +2082,10 @@
         "orchestration"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/full-stack-orchestration-full-stack-feature/SKILL.md",
       "category": "meta"
@@ -2101,10 +2101,10 @@
         "handling"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/gdpr-data-handling/SKILL.md",
       "category": "implementation"
@@ -2120,10 +2120,10 @@
         "workflows"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/git-advanced-workflows/SKILL.md",
       "category": "implementation"
@@ -2139,10 +2139,10 @@
         "workflow"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/git-pr-workflows-git-workflow/SKILL.md",
       "category": "implementation"
@@ -2158,10 +2158,10 @@
         "specialist"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/git-pr-workflows-onboard/SKILL.md",
       "category": "implementation"
@@ -2177,10 +2177,10 @@
         "specializing"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/git-pr-workflows-pr-enhance/SKILL.md",
       "category": "implementation"
@@ -2196,10 +2196,10 @@
         "goroutines"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/go-concurrency-patterns/SKILL.md",
       "category": "implementation"
@@ -2215,17 +2215,17 @@
         "gdscript"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/godot-gdscript-patterns/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "golang-pro",
-      "description": "Master Go 1.21+ with modern patterns, advanced concurrency, performance optimization, and production-ready microservices. Expert in the latest Go ecosystem including generics, workspaces, and cutting-edge frameworks. Use PROACTIVELY for Go development, architecture design, or performance optimization.",
+      "description": "Master Go 1.21+ with modern patterns, advanced concurrency,",
       "triggers": [
         "golang-pro",
         "golang pro",
@@ -2234,10 +2234,10 @@
         "patterns"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/golang-pro/SKILL.md",
       "category": "implementation"
@@ -2253,17 +2253,17 @@
         "production"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/grafana-dashboards/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "graphql-architect",
-      "description": "Master modern GraphQL with federation, performance optimization, and enterprise security. Build scalable schemas, implement advanced caching, and design real-time systems. Use PROACTIVELY for GraphQL architecture or performance optimization.",
+      "description": "Master modern GraphQL with federation, performance optimization,",
       "triggers": [
         "graphql-architect",
         "graphql architect",
@@ -2272,17 +2272,17 @@
         "graphql"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/graphql-architect/SKILL.md",
       "category": "planning"
     },
     {
       "name": "java-pro",
-      "description": "Master Java 21+ with modern features like virtual threads, pattern matching, and Spring Boot 3.x. Expert in the latest Java ecosystem including GraalVM, Project Loom, and cloud-native patterns. Use PROACTIVELY for Java development, microservices architecture, or performance optimization.",
+      "description": "Master Java 21+ with modern features like virtual threads, pattern",
       "triggers": [
         "java-pro",
         "java pro",
@@ -2291,17 +2291,17 @@
         "features"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/java-pro/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "javascript-pro",
-      "description": "Master modern JavaScript with ES6+, async patterns, and Node.js APIs. Handles promises, event loops, and browser/Node compatibility. Use PROACTIVELY for JavaScript optimization, async debugging, or complex JS patterns.",
+      "description": "Master modern JavaScript with ES6+, async patterns, and Node.js",
       "triggers": [
         "javascript-pro",
         "javascript pro",
@@ -2310,10 +2310,10 @@
         "javascript"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/javascript-pro/SKILL.md",
       "category": "implementation"
@@ -2329,10 +2329,10 @@
         "testing"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/javascript-testing-patterns/SKILL.md",
       "category": "quality"
@@ -2348,17 +2348,17 @@
         "architecture"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/javascript-typescript-typescript-scaffold/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "julia-pro",
-      "description": "Master Julia 1.10+ with modern features, performance optimization, multiple dispatch, and production-ready practices. Expert in the Julia ecosystem including package management, scientific computing, and high-performance numerical code. Use PROACTIVELY for Julia development, optimization, or advanced Julia patterns.",
+      "description": "Master Julia 1.10+ with modern features, performance optimization,",
       "triggers": [
         "julia-pro",
         "julia pro",
@@ -2367,17 +2367,17 @@
         "modern"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/julia-pro/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "kubernetes-architect",
-      "description": "Expert Kubernetes architect specializing in cloud-native infrastructure, advanced GitOps workflows (ArgoCD/Flux), and enterprise container orchestration. Masters EKS/AKS/GKE, service mesh (Istio/Linkerd), progressive delivery, multi-tenancy, and platform engineering. Handles security, observability, cost optimization, and developer experience. Use PROACTIVELY for K8s architecture, GitOps implementation, or cloud-native platform design.",
+      "description": "Expert Kubernetes architect specializing in cloud-native",
       "triggers": [
         "kubernetes-architect",
         "kubernetes architect",
@@ -2386,10 +2386,10 @@
         "architect"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/kubernetes-architect/SKILL.md",
       "category": "planning"
@@ -2405,10 +2405,10 @@
         "langchain"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/langchain-architecture/SKILL.md",
       "category": "planning"
@@ -2424,10 +2424,10 @@
         "expert"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/llm-application-dev-ai-assistant/SKILL.md",
       "category": "implementation"
@@ -2443,10 +2443,10 @@
         "agent"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/llm-application-dev-langchain-agent/SKILL.md",
       "category": "implementation"
@@ -2462,10 +2462,10 @@
         "engineer"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/llm-application-dev-prompt-optimize/SKILL.md",
       "category": "implementation"
@@ -2481,10 +2481,10 @@
         "evaluation"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/llm-evaluation/SKILL.md",
       "category": "implementation"
@@ -2500,17 +2500,17 @@
         "complete"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/machine-learning-ops-ml-pipeline/SKILL.md",
       "category": "delivery"
     },
     {
       "name": "malware-analyst",
-      "description": "Expert malware analyst specializing in defensive malware research, threat intelligence, and incident response. Masters sandbox analysis, behavioral analysis, and malware family identification. Handles static/dynamic analysis, unpacking, and IOC extraction. Use PROACTIVELY for malware triage, threat hunting, incident response, or security research.",
+      "description": "Expert malware analyst specializing in defensive malware research,",
       "triggers": [
         "malware-analyst",
         "malware analyst",
@@ -2519,29 +2519,28 @@
         "analyst"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/malware-analyst/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "market-sizing-analysis",
-      "description": "This skill should be used when the user asks to \"calculate TAM\", determine SAM\", \"estimate SOM\", \"size the market\", \"calculate market opportunity\", \"what's the total addressable market\", or requests market sizing analysis for a startup or business opportunity.",
+      "description": "This skill should be used when the user asks to \"calculate TAM\",",
       "triggers": [
         "market-sizing-analysis",
         "market sizing analysis",
         "skill",
-        "calculate",
-        "determine"
+        "calculate"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/market-sizing-analysis/SKILL.md",
       "category": "implementation"
@@ -2557,10 +2556,10 @@
         "forensics"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/memory-forensics/SKILL.md",
       "category": "implementation"
@@ -2576,10 +2575,10 @@
         "programming"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/memory-safety-patterns/SKILL.md",
       "category": "implementation"
@@ -2595,10 +2594,10 @@
         "including"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/modern-javascript-patterns/SKILL.md",
       "category": "implementation"
@@ -2614,10 +2613,10 @@
         "architectures"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/multi-cloud-architecture/SKILL.md",
       "category": "planning"
@@ -2629,21 +2628,21 @@
         "multi-platform-apps-multi-platform",
         "multi platform apps multi platform",
         "deploy",
-        "feature",
-        "consistently"
+        "consistently",
+        "across"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/multi-platform-apps-multi-platform/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "network-engineer",
-      "description": "Expert network engineer specializing in modern cloud networking, security architectures, and performance optimization. Masters multi-cloud connectivity, service mesh, zero-trust networking, SSL/TLS, global load balancing, and advanced troubleshooting. Handles CDN optimization, network automation, and compliance. Use PROACTIVELY for network design, connectivity issues, or performance optimization.",
+      "description": "Expert network engineer specializing in modern cloud networking,",
       "triggers": [
         "network-engineer",
         "network engineer",
@@ -2652,10 +2651,10 @@
         "engineer"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/network-engineer/SKILL.md",
       "category": "implementation"
@@ -2671,10 +2670,10 @@
         "router"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/nextjs-app-router-patterns/SKILL.md",
       "category": "implementation"
@@ -2690,17 +2689,17 @@
         "openapi"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/openapi-spec-generation/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "payment-integration",
-      "description": "Integrate Stripe, PayPal, and payment processors. Handles checkout flows, subscriptions, webhooks, and PCI compliance. Use PROACTIVELY when implementing payments, billing, or subscription features.",
+      "description": "Integrate Stripe, PayPal, and payment processors. Handles checkout",
       "triggers": [
         "payment-integration",
         "payment integration",
@@ -2709,10 +2708,10 @@
         "paypal"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/payment-integration/SKILL.md",
       "category": "implementation"
@@ -2728,10 +2727,10 @@
         "payment"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/paypal-integration/SKILL.md",
       "category": "implementation"
@@ -2747,17 +2746,17 @@
         "requirements"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/pci-compliance/SKILL.md",
       "category": "quality"
     },
     {
       "name": "performance-engineer",
-      "description": "Expert performance engineer specializing in modern observability, application optimization, and scalable system performance. Masters OpenTelemetry, distributed tracing, load testing, multi-tier caching, Core Web Vitals, and performance monitoring. Handles end-to-end optimization, real user monitoring, and scalability patterns. Use PROACTIVELY for performance optimization, observability, or scalability challenges.",
+      "description": "Expert performance engineer specializing in modern observability,",
       "triggers": [
         "performance-engineer",
         "performance engineer",
@@ -2766,10 +2765,10 @@
         "engineer"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/performance-engineer/SKILL.md",
       "category": "implementation"
@@ -2785,10 +2784,10 @@
         "review"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/performance-testing-review-ai-review/SKILL.md",
       "category": "quality"
@@ -2804,17 +2803,17 @@
         "testing"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/performance-testing-review-multi-agent-review/SKILL.md",
       "category": "quality"
     },
     {
       "name": "php-pro",
-      "description": "Write idiomatic PHP code with generators, iterators, SPL data structures, and modern OOP features. Use PROACTIVELY for high-performance PHP applications.",
+      "description": "Write idiomatic PHP code with generators, iterators, SPL data",
       "triggers": [
         "php-pro",
         "php pro",
@@ -2823,10 +2822,10 @@
         "iterators"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/php-pro/SKILL.md",
       "category": "implementation"
@@ -2842,17 +2841,17 @@
         "schema"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/postgresql/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "prompt-engineer",
-      "description": "Expert prompt engineer specializing in advanced prompting techniques, LLM optimization, and AI system design. Masters chain-of-thought, constitutional AI, and production prompt strategies. Use when building AI features, improving agent performance, or crafting system prompts.",
+      "description": "Expert prompt engineer specializing in advanced prompting",
       "triggers": [
         "prompt-engineer",
         "prompt engineer",
@@ -2861,10 +2860,10 @@
         "engineer"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/prompt-engineer/SKILL.md",
       "category": "implementation"
@@ -2880,10 +2879,10 @@
         "prompt"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/prompt-engineering-patterns/SKILL.md",
       "category": "implementation"
@@ -2899,10 +2898,10 @@
         "protocol"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/protocol-reverse-engineering/SKILL.md",
       "category": "implementation"
@@ -2918,10 +2917,10 @@
         "architecture"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/python-development-python-scaffold/SKILL.md",
       "category": "implementation"
@@ -2937,10 +2936,10 @@
         "python"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/python-packaging/SKILL.md",
       "category": "implementation"
@@ -2956,17 +2955,17 @@
         "python"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/python-performance-optimization/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "python-pro",
-      "description": "Master Python 3.12+ with modern features, async programming, performance optimization, and production-ready practices. Expert in the latest Python ecosystem including uv, ruff, pydantic, and FastAPI. Use PROACTIVELY for Python development, optimization, or advanced Python patterns.",
+      "description": "Master Python 3.12+ with modern features, async programming,",
       "triggers": [
         "python-pro",
         "python pro",
@@ -2975,10 +2974,10 @@
         "modern"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/python-pro/SKILL.md",
       "category": "implementation"
@@ -2994,17 +2993,17 @@
         "testing"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/python-testing-patterns/SKILL.md",
       "category": "quality"
     },
     {
       "name": "quant-analyst",
-      "description": "Build financial models, backtest trading strategies, and analyze market data. Implements risk metrics, portfolio optimization, and statistical arbitrage. Use PROACTIVELY for quantitative finance, trading algorithms, or risk analysis.",
+      "description": "Build financial models, backtest trading strategies, and analyze",
       "triggers": [
         "quant-analyst",
         "quant analyst",
@@ -3013,10 +3012,10 @@
         "backtest"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/quant-analyst/SKILL.md",
       "category": "implementation"
@@ -3032,10 +3031,10 @@
         "systems"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/rag-implementation/SKILL.md",
       "category": "implementation"
@@ -3051,10 +3050,10 @@
         "applications"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/react-modernization/SKILL.md",
       "category": "implementation"
@@ -3070,10 +3069,10 @@
         "native"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/react-native-architecture/SKILL.md",
       "category": "planning"
@@ -3089,10 +3088,10 @@
         "react"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/react-state-management/SKILL.md",
       "category": "implementation"
@@ -3128,7 +3127,7 @@
     },
     {
       "name": "reference-builder",
-      "description": "Creates exhaustive technical references and API documentation. Generates comprehensive parameter listings, configuration guides, and searchable reference materials. Use PROACTIVELY for API docs, configuration references, or complete technical specifications.",
+      "description": "Creates exhaustive technical references and API documentation.",
       "triggers": [
         "reference-builder",
         "reference builder",
@@ -3137,10 +3136,10 @@
         "technical"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/reference-builder/SKILL.md",
       "category": "implementation"
@@ -3178,7 +3177,7 @@
     },
     {
       "name": "ruby-pro",
-      "description": "Write idiomatic Ruby code with metaprogramming, Rails patterns, and performance optimization. Specializes in Ruby on Rails, gem development, and testing frameworks. Use PROACTIVELY for Ruby refactoring, optimization, or complex Ruby features.",
+      "description": "Write idiomatic Ruby code with metaprogramming, Rails patterns, and",
       "triggers": [
         "ruby-pro",
         "ruby pro",
@@ -3187,10 +3186,10 @@
         "rails"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/ruby-pro/SKILL.md",
       "category": "implementation"
@@ -3206,17 +3205,17 @@
         "programming"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/rust-async-patterns/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "rust-pro",
-      "description": "Master Rust 1.75+ with modern async patterns, advanced type system features, and production-ready systems programming. Expert in the latest Rust ecosystem including Tokio, axum, and cutting-edge crates. Use PROACTIVELY for Rust development, performance optimization, or systems programming.",
+      "description": "Master Rust 1.75+ with modern async patterns, advanced type system",
       "triggers": [
         "rust-pro",
         "rust pro",
@@ -3225,10 +3224,10 @@
         "async"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/rust-pro/SKILL.md",
       "category": "implementation"
@@ -3244,17 +3243,17 @@
         "readers"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/screen-reader-testing/SKILL.md",
       "category": "quality"
     },
     {
       "name": "search-specialist",
-      "description": "Expert web researcher using advanced search techniques and synthesis. Masters search operators, result filtering, and multi-source verification. Handles competitive analysis and fact-checking. Use PROACTIVELY for deep research, information gathering, or trend analysis.",
+      "description": "Expert web researcher using advanced search techniques and",
       "triggers": [
         "search-specialist",
         "search specialist",
@@ -3263,10 +3262,10 @@
         "advanced"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/search-specialist/SKILL.md",
       "category": "implementation"
@@ -3282,17 +3281,17 @@
         "secrets"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/secrets-management/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "security-auditor",
-      "description": "Expert security auditor specializing in DevSecOps, comprehensive cybersecurity, and compliance frameworks. Masters vulnerability assessment, threat modeling, secure authentication (OAuth2/OIDC), OWASP standards, cloud security, and security automation. Handles DevSecOps integration, compliance (GDPR/HIPAA/SOC2), and incident response. Use PROACTIVELY for security audits, DevSecOps, or compliance implementation.",
+      "description": "Expert security auditor specializing in DevSecOps, comprehensive",
       "triggers": [
         "security-auditor",
         "security auditor",
@@ -3301,10 +3300,10 @@
         "auditor"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/security-auditor/SKILL.md",
       "category": "quality"
@@ -3320,10 +3319,10 @@
         "specializing"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/security-compliance-compliance-check/SKILL.md",
       "category": "quality"
@@ -3339,10 +3338,10 @@
         "requirements"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/security-requirement-extraction/SKILL.md",
       "category": "implementation"
@@ -3358,10 +3357,10 @@
         "specializing"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/security-scanning-security-dependencies/SKILL.md",
       "category": "implementation"
@@ -3377,17 +3376,17 @@
         "security"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/security-scanning-security-hardening/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "security-scanning-security-sast",
-      "description": "Static Application Security Testing (SAST) for code vulnerability analysis across multiple languages and frameworks",
+      "description": "Static Application Security Testing (SAST) for code vulnerability",
       "triggers": [
         "security-scanning-security-sast",
         "security scanning security sast",
@@ -3396,17 +3395,17 @@
         "security"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/security-scanning-security-sast/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "seo-authority-builder",
-      "description": "Analyzes content for E-E-A-T signals and suggests improvements to build authority and trust. Identifies missing credibility elements. Use PROACTIVELY for YMYL topics.",
+      "description": "Analyzes content for E-E-A-T signals and suggests improvements to",
       "triggers": [
         "seo-authority-builder",
         "seo authority builder",
@@ -3415,17 +3414,17 @@
         "e-e-a-t"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/seo-authority-builder/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "seo-cannibalization-detector",
-      "description": "Analyzes multiple provided pages to identify keyword overlap and potential cannibalization issues. Suggests differentiation strategies. Use PROACTIVELY when reviewing similar content.",
+      "description": "Analyzes multiple provided pages to identify keyword overlap and",
       "triggers": [
         "seo-cannibalization-detector",
         "seo cannibalization detector",
@@ -3434,17 +3433,17 @@
         "provided"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/seo-cannibalization-detector/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "seo-content-auditor",
-      "description": "Analyzes provided content for quality, E-E-A-T signals, and SEO best practices. Scores content and provides improvement recommendations based on established guidelines. Use PROACTIVELY for content review.",
+      "description": "Analyzes provided content for quality, E-E-A-T signals, and SEO",
       "triggers": [
         "seo-content-auditor",
         "seo content auditor",
@@ -3453,17 +3452,17 @@
         "content"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/seo-content-auditor/SKILL.md",
       "category": "quality"
     },
     {
       "name": "seo-content-planner",
-      "description": "Creates comprehensive content outlines and topic clusters for SEO. Plans content calendars and identifies topic gaps. Use PROACTIVELY for content strategy and planning.",
+      "description": "Creates comprehensive content outlines and topic clusters for SEO.",
       "triggers": [
         "seo-content-planner",
         "seo content planner",
@@ -3472,17 +3471,17 @@
         "content"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/seo-content-planner/SKILL.md",
       "category": "planning"
     },
     {
       "name": "seo-content-refresher",
-      "description": "Identifies outdated elements in provided content and suggests updates to maintain freshness. Finds statistics, dates, and examples that need updating. Use PROACTIVELY for older content.",
+      "description": "Identifies outdated elements in provided content and suggests",
       "triggers": [
         "seo-content-refresher",
         "seo content refresher",
@@ -3491,17 +3490,17 @@
         "elements"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/seo-content-refresher/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "seo-content-writer",
-      "description": "Writes SEO-optimized content based on provided keywords and topic briefs. Creates engaging, comprehensive content following best practices. Use PROACTIVELY for content creation tasks.",
+      "description": "Writes SEO-optimized content based on provided keywords and topic",
       "triggers": [
         "seo-content-writer",
         "seo content writer",
@@ -3510,17 +3509,17 @@
         "content"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/seo-content-writer/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "seo-keyword-strategist",
-      "description": "Analyzes keyword usage in provided content, calculates density, suggests semantic variations and LSI keywords based on the topic. Prevents over-optimization. Use PROACTIVELY for content optimization.",
+      "description": "Analyzes keyword usage in provided content, calculates density,",
       "triggers": [
         "seo-keyword-strategist",
         "seo keyword strategist",
@@ -3529,17 +3528,17 @@
         "usage"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/seo-keyword-strategist/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "seo-meta-optimizer",
-      "description": "Creates optimized meta titles, descriptions, and URL suggestions based on character limits and best practices. Generates compelling, keyword-rich metadata. Use PROACTIVELY for new content.",
+      "description": "Creates optimized meta titles, descriptions, and URL suggestions",
       "triggers": [
         "seo-meta-optimizer",
         "seo meta optimizer",
@@ -3548,17 +3547,17 @@
         "titles"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/seo-meta-optimizer/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "seo-snippet-hunter",
-      "description": "Formats content to be eligible for featured snippets and SERP features. Creates snippet-optimized content blocks based on best practices. Use PROACTIVELY for question-based content.",
+      "description": "Formats content to be eligible for featured snippets and SERP",
       "triggers": [
         "seo-snippet-hunter",
         "seo snippet hunter",
@@ -3567,17 +3566,17 @@
         "eligible"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/seo-snippet-hunter/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "seo-structure-architect",
-      "description": "Analyzes and optimizes content structure including header hierarchy, suggests schema markup, and internal linking opportunities. Creates search-friendly content organization. Use PROACTIVELY for content structuring.",
+      "description": "Analyzes and optimizes content structure including header",
       "triggers": [
         "seo-structure-architect",
         "seo structure architect",
@@ -3586,10 +3585,10 @@
         "content"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/seo-structure-architect/SKILL.md",
       "category": "planning"
@@ -3605,10 +3604,10 @@
         "static"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/shellcheck-configuration/SKILL.md",
       "category": "implementation"
@@ -3639,17 +3638,17 @@
         "optimization"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/sql-optimization-patterns/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "sql-pro",
-      "description": "Master modern SQL with cloud-native databases, OLTP/OLAP optimization, and advanced query techniques. Expert in performance tuning, data modeling, and hybrid analytical systems. Use PROACTIVELY for database optimization or complex analysis.",
+      "description": "Master modern SQL with cloud-native databases, OLTP/OLAP",
       "triggers": [
         "sql-pro",
         "sql pro",
@@ -3658,10 +3657,10 @@
         "cloud-native"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/sql-pro/SKILL.md",
       "category": "implementation"
@@ -3677,10 +3676,10 @@
         "payment"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/stripe-integration/SKILL.md",
       "category": "implementation"
@@ -3758,10 +3757,10 @@
         "expert"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/systems-programming-rust-project/SKILL.md",
       "category": "implementation"
@@ -3777,17 +3776,17 @@
         "systems"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/tailwind-design-system/SKILL.md",
       "category": "planning"
     },
     {
       "name": "test-automator",
-      "description": "Master AI-powered test automation with modern frameworks, self-healing tests, and comprehensive quality engineering. Build scalable testing strategies with advanced CI/CD integration. Use PROACTIVELY for testing automation or quality assurance.",
+      "description": "Master AI-powered test automation with modern frameworks,",
       "triggers": [
         "test-automator",
         "test automator",
@@ -3796,10 +3795,10 @@
         "automation"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/test-automator/SKILL.md",
       "category": "quality"
@@ -3847,17 +3846,17 @@
         "advanced"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/typescript-advanced-types/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "typescript-pro",
-      "description": "Master TypeScript with advanced types, generics, and strict type safety. Handles complex type systems, decorators, and enterprise-grade patterns. Use PROACTIVELY for TypeScript architecture, type inference optimization, or advanced typing patterns.",
+      "description": "Master TypeScript with advanced types, generics, and strict type",
       "triggers": [
         "typescript-pro",
         "typescript pro",
@@ -3866,17 +3865,17 @@
         "advanced"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/typescript-pro/SKILL.md",
       "category": "implementation"
     },
     {
       "name": "ui-ux-designer",
-      "description": "Create interface designs, wireframes, and design systems. Masters user research, accessibility standards, and modern design tools. Specializes in design tokens, component libraries, and inclusive design. Use PROACTIVELY for design systems, user flows, or interface optimization.",
+      "description": "Create interface designs, wireframes, and design systems. Masters",
       "triggers": [
         "ui-ux-designer",
         "ui ux designer",
@@ -3885,17 +3884,17 @@
         "designs"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/ui-ux-designer/SKILL.md",
       "category": "planning"
     },
     {
       "name": "ui-visual-validator",
-      "description": "Rigorous visual validation expert specializing in UI testing, design system compliance, and accessibility verification. Masters screenshot analysis, visual regression testing, and component validation. Use PROACTIVELY to verify UI modifications have achieved their intended goals through comprehensive visual analysis.",
+      "description": "Rigorous visual validation expert specializing in UI testing,",
       "triggers": [
         "ui-visual-validator",
         "ui visual validator",
@@ -3904,10 +3903,10 @@
         "validation"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/ui-visual-validator/SKILL.md",
       "category": "quality"
@@ -3923,10 +3922,10 @@
         "maintainable"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/unit-testing-test-generate/SKILL.md",
       "category": "quality"
@@ -3986,10 +3985,10 @@
         "manager"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/uv-package-manager/SKILL.md",
       "category": "implementation"
@@ -4005,10 +4004,10 @@
         "databases"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/vector-database-engineer/SKILL.md",
       "category": "implementation"
@@ -4024,10 +4023,10 @@
         "index"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/vector-index-tuning/SKILL.md",
       "category": "implementation"
@@ -4078,10 +4077,10 @@
         "comprehensively"
       ],
       "outputs": [
-        "implementation"
+        "working-code"
       ],
-      "depends_on": [],
-      "next_skills": [],
+      "depends_on": "[]",
+      "next_skills": "[]",
       "atomic": true,
       "path": "library/web3-testing/SKILL.md",
       "category": "quality"

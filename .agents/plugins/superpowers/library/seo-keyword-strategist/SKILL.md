@@ -1,10 +1,18 @@
 ---
 name: seo-keyword-strategist
-description: Analyzes keyword usage in provided content, calculates density,
-  suggests semantic variations and LSI keywords based on the topic. Prevents
-  over-optimization. Use PROACTIVELY for content optimization.
-metadata:
-  model: haiku
+description: "Analyzes keyword usage in provided content, calculates density,"
+triggers:
+  - "seo-keyword-strategist"
+  - "seo keyword strategist"
+  - "analyzes"
+  - "keyword"
+  - "usage"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 ## Use this skill when

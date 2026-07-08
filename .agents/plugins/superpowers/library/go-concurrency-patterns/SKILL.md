@@ -1,6 +1,18 @@
 ---
 name: go-concurrency-patterns
-description: Master Go concurrency with goroutines, channels, sync primitives, and context. Use when building concurrent Go applications, implementing worker pools, or debugging race conditions.
+description: "Master Go concurrency with goroutines, channels, sync primitives, and context. Use when building concurrent Go applications, implementing worker pools, or debugging race conditions."
+triggers:
+  - "go-concurrency-patterns"
+  - "go concurrency patterns"
+  - "master"
+  - "concurrency"
+  - "goroutines"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # Go Concurrency Patterns

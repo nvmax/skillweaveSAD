@@ -1,6 +1,18 @@
 ---
 name: event-sourcing-architect
 description: "Expert in event sourcing, CQRS, and event-driven architecture patterns. Masters event store design, projection building, saga orchestration, and eventual consistency patterns. Use PROACTIVELY for event-sourced systems, audit trails, or temporal queries."
+triggers:
+  - "event-sourcing-architect"
+  - "event sourcing architect"
+  - "expert"
+  - "event"
+  - "sourcing"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: planning
 ---
 
 # Event Sourcing Architect

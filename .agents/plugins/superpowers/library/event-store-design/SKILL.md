@@ -1,6 +1,18 @@
 ---
 name: event-store-design
-description: Design and implement event stores for event-sourced systems. Use when building event sourcing infrastructure, choosing event store technologies, or implementing event persistence patterns.
+description: "Design and implement event stores for event-sourced systems. Use when building event sourcing infrastructure, choosing event store technologies, or implementing event persistence patterns."
+triggers:
+  - "event-store-design"
+  - "event store design"
+  - "design"
+  - "implement"
+  - "event"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: planning
 ---
 
 # Event Store Design

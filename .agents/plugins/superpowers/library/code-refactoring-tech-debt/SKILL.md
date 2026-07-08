@@ -1,6 +1,18 @@
 ---
 name: code-refactoring-tech-debt
 description: "You are a technical debt expert specializing in identifying, quantifying, and prioritizing technical debt in software projects. Analyze the codebase to uncover debt, assess its impact, and create acti"
+triggers:
+  - "code-refactoring-tech-debt"
+  - "code refactoring tech debt"
+  - "technical"
+  - "expert"
+  - "specializing"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # Technical Debt Analysis and Remediation

@@ -1,6 +1,18 @@
 ---
 name: data-storytelling
-description: Transform data into compelling narratives using visualization, context, and persuasive structure. Use when presenting analytics to stakeholders, creating data reports, or building executive presentations.
+description: "Transform data into compelling narratives using visualization, context, and persuasive structure. Use when presenting analytics to stakeholders, creating data reports, or building executive presentations."
+triggers:
+  - "data-storytelling"
+  - "data storytelling"
+  - "transform"
+  - "compelling"
+  - "narratives"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # Data Storytelling

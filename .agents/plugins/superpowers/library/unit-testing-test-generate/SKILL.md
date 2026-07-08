@@ -1,6 +1,18 @@
 ---
 name: unit-testing-test-generate
-description: Generate comprehensive, maintainable unit tests across languages with strong coverage and edge case focus.
+description: "Generate comprehensive, maintainable unit tests across languages with strong coverage and edge case focus."
+triggers:
+  - "unit-testing-test-generate"
+  - "unit testing test generate"
+  - "generate"
+  - "comprehensive"
+  - "maintainable"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: quality
 ---
 
 # Automated Unit Test Generation

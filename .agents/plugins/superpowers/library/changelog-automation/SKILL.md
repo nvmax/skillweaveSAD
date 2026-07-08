@@ -1,6 +1,18 @@
 ---
 name: changelog-automation
-description: Automate changelog generation from commits, PRs, and releases following Keep a Changelog format. Use when setting up release workflows, generating release notes, or standardizing commit conventions.
+description: "Automate changelog generation from commits, PRs, and releases following Keep a Changelog format. Use when setting up release workflows, generating release notes, or standardizing commit conventions."
+triggers:
+  - "changelog-automation"
+  - "changelog automation"
+  - "automate"
+  - "changelog"
+  - "generation"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: delivery
 ---
 
 # Changelog Automation

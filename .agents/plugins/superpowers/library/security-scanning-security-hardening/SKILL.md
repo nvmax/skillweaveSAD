@@ -1,6 +1,18 @@
 ---
 name: security-scanning-security-hardening
 description: "Coordinate multi-layer security scanning and hardening across application, infrastructure, and compliance controls."
+triggers:
+  - "security-scanning-security-hardening"
+  - "security scanning security hardening"
+  - "coordinate"
+  - "multi-layer"
+  - "security"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 Implement comprehensive security hardening with defense-in-depth strategy through coordinated multi-agent orchestration:

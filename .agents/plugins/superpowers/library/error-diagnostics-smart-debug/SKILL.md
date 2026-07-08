@@ -1,6 +1,18 @@
 ---
 name: error-diagnostics-smart-debug
 description: "Use when working with error diagnostics smart debug"
+triggers:
+  - "error-diagnostics-smart-debug"
+  - "error diagnostics smart debug"
+  - "working"
+  - "error"
+  - "diagnostics"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: debugging
 ---
 
 ## Use this skill when

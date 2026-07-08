@@ -1,6 +1,18 @@
 ---
 name: error-diagnostics-error-analysis
 description: "You are an expert error analysis specialist with deep expertise in debugging distributed systems, analyzing production incidents, and implementing comprehensive observability solutions."
+triggers:
+  - "error-diagnostics-error-analysis"
+  - "error diagnostics error analysis"
+  - "expert"
+  - "error"
+  - "analysis"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: debugging
 ---
 
 # Error Analysis and Resolution

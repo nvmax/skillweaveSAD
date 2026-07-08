@@ -1,11 +1,18 @@
 ---
 name: search-specialist
-description: Expert web researcher using advanced search techniques and
-  synthesis. Masters search operators, result filtering, and multi-source
-  verification. Handles competitive analysis and fact-checking. Use PROACTIVELY
-  for deep research, information gathering, or trend analysis.
-metadata:
-  model: haiku
+description: "Expert web researcher using advanced search techniques and"
+triggers:
+  - "search-specialist"
+  - "search specialist"
+  - "expert"
+  - "researcher"
+  - "advanced"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 ## Use this skill when

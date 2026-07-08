@@ -1,6 +1,18 @@
 ---
 name: code-documentation-code-explain
 description: "You are a code education expert specializing in explaining complex code through clear narratives, visual diagrams, and step-by-step breakdowns. Transform difficult concepts into understandable explanations."
+triggers:
+  - "code-documentation-code-explain"
+  - "code documentation code explain"
+  - "education"
+  - "expert"
+  - "specializing"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # Code Explanation and Analysis

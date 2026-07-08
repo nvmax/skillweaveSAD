@@ -1,10 +1,18 @@
 ---
 name: dx-optimizer
-description: Developer Experience specialist. Improves tooling, setup, and
-  workflows. Use PROACTIVELY when setting up new projects, after team feedback,
-  or when development friction is noticed.
-metadata:
-  model: sonnet
+description: "Developer Experience specialist. Improves tooling, setup, and"
+triggers:
+  - "dx-optimizer"
+  - "dx optimizer"
+  - "developer"
+  - "experience"
+  - "specialist"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 ## Use this skill when

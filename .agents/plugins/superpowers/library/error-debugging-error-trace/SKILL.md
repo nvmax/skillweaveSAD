@@ -1,6 +1,18 @@
 ---
 name: error-debugging-error-trace
 description: "You are an error tracking and observability expert specializing in implementing comprehensive error monitoring solutions. Set up error tracking systems, configure alerts, implement structured logging, and ensure teams can quickly identify and resolve production issues."
+triggers:
+  - "error-debugging-error-trace"
+  - "error debugging error trace"
+  - "error"
+  - "tracking"
+  - "observability"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: debugging
 ---
 
 # Error Tracking and Monitoring

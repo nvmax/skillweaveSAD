@@ -1,12 +1,18 @@
 ---
 name: code-reviewer
-description: Elite code review expert specializing in modern AI-powered code
-  analysis, security vulnerabilities, performance optimization, and production
-  reliability. Masters static analysis tools, security scanning, and
-  configuration review with 2024/2025 best practices. Use PROACTIVELY for code
-  quality assurance.
-metadata:
-  model: opus
+description: "Elite code review expert specializing in modern AI-powered code"
+triggers:
+  - "code-reviewer"
+  - "code reviewer"
+  - "elite"
+  - "review"
+  - "expert"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: quality
 ---
 
 ## Use this skill when

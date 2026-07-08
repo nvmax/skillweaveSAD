@@ -1,9 +1,18 @@
 ---
 name: conductor-setup
-description: Initialize project with Conductor artifacts (product definition,
-  tech stack, workflow, style guides)
-metadata:
-  argument-hint: "[--resume]"
+description: "Initialize project with Conductor artifacts (product definition,"
+triggers:
+  - "conductor-setup"
+  - "conductor setup"
+  - "initialize"
+  - "project"
+  - "conductor"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: meta
 ---
 
 # Conductor Setup

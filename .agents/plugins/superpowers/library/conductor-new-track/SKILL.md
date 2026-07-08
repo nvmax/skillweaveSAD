@@ -1,8 +1,18 @@
 ---
 name: conductor-new-track
-description: Create a new track with specification and phased implementation plan
-metadata:
-  argument-hint: <feature|bug|chore|refactor> <name>
+description: "Create a new track with specification and phased implementation plan"
+triggers:
+  - "conductor-new-track"
+  - "conductor new track"
+  - "create"
+  - "track"
+  - "specification"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: meta
 ---
 
 # New Track

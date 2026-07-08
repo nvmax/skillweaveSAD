@@ -1,11 +1,18 @@
 ---
 name: fastapi-pro
-description: Build high-performance async APIs with FastAPI, SQLAlchemy 2.0, and
-  Pydantic V2. Master microservices, WebSockets, and modern Python async
-  patterns. Use PROACTIVELY for FastAPI development, async optimization, or API
-  architecture.
-metadata:
-  model: opus
+description: "Build high-performance async APIs with FastAPI, SQLAlchemy 2.0, and"
+triggers:
+  - "fastapi-pro"
+  - "fastapi pro"
+  - "high-performance"
+  - "async"
+  - "fastapi"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 ## Use this skill when

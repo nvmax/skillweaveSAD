@@ -1,6 +1,18 @@
 ---
 name: full-stack-orchestration-full-stack-feature
 description: "Use when working with full stack orchestration full stack feature"
+triggers:
+  - "full-stack-orchestration-full-stack-feature"
+  - "full stack orchestration full stack feature"
+  - "working"
+  - "stack"
+  - "orchestration"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: meta
 ---
 
 ## Use this skill when

@@ -1,6 +1,18 @@
 ---
 name: multi-platform-apps-multi-platform
 description: "Build and deploy the same feature consistently across web, mobile, and desktop platforms using API-first architecture and parallel implementation strategies."
+triggers:
+  - "multi-platform-apps-multi-platform"
+  - "multi platform apps multi platform"
+  - "deploy"
+  - "consistently"
+  - "across"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # Multi-Platform Feature Development Workflow

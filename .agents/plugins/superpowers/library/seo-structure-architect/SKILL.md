@@ -1,10 +1,18 @@
 ---
 name: seo-structure-architect
-description: Analyzes and optimizes content structure including header
-  hierarchy, suggests schema markup, and internal linking opportunities. Creates
-  search-friendly content organization. Use PROACTIVELY for content structuring.
-metadata:
-  model: haiku
+description: "Analyzes and optimizes content structure including header"
+triggers:
+  - "seo-structure-architect"
+  - "seo structure architect"
+  - "analyzes"
+  - "optimizes"
+  - "content"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: planning
 ---
 
 ## Use this skill when

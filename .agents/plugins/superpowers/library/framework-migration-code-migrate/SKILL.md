@@ -1,6 +1,18 @@
 ---
 name: framework-migration-code-migrate
 description: "You are a code migration expert specializing in transitioning codebases between frameworks, languages, versions, and platforms. Generate comprehensive migration plans, automated migration scripts, and"
+triggers:
+  - "framework-migration-code-migrate"
+  - "framework migration code migrate"
+  - "migration"
+  - "expert"
+  - "specializing"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # Code Migration Assistant

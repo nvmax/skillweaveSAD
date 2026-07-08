@@ -1,6 +1,18 @@
 ---
 name: data-engineering-data-driven-feature
 description: "Build features guided by data insights, A/B testing, and continuous measurement using specialized agents for analysis, implementation, and experimentation."
+triggers:
+  - "data-engineering-data-driven-feature"
+  - "data engineering data driven feature"
+  - "features"
+  - "guided"
+  - "insights"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # Data-Driven Feature Development

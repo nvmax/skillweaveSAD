@@ -1,9 +1,18 @@
 ---
 name: debugger
-description: Debugging specialist for errors, test failures, and unexpected
-  behavior. Use proactively when encountering any issues.
-metadata:
-  model: sonnet
+description: "Debugging specialist for errors, test failures, and unexpected"
+triggers:
+  - "debugger"
+  - "debugger"
+  - "debugging"
+  - "specialist"
+  - "errors"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: debugging
 ---
 
 ## Use this skill when

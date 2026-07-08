@@ -1,6 +1,18 @@
 ---
 name: code-refactoring-context-restore
 description: "Use when working with code refactoring context restore"
+triggers:
+  - "code-refactoring-context-restore"
+  - "code refactoring context restore"
+  - "working"
+  - "refactoring"
+  - "context"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # Context Restoration: Advanced Semantic Memory Rehydration

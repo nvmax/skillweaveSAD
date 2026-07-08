@@ -1,11 +1,18 @@
 ---
 name: frontend-security-coder
-description: Expert in secure frontend coding practices specializing in XSS
-  prevention, output sanitization, and client-side security patterns. Use
-  PROACTIVELY for frontend security implementations or client-side security code
-  reviews.
-metadata:
-  model: sonnet
+description: "Expert in secure frontend coding practices specializing in XSS"
+triggers:
+  - "frontend-security-coder"
+  - "frontend security coder"
+  - "expert"
+  - "secure"
+  - "frontend"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 ## Use this skill when

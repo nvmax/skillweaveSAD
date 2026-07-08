@@ -1,6 +1,18 @@
 ---
 name: memory-safety-patterns
-description: Implement memory-safe programming with RAII, ownership, smart pointers, and resource management across Rust, C++, and C. Use when writing safe systems code, managing resources, or preventing memory bugs.
+description: "Implement memory-safe programming with RAII, ownership, smart pointers, and resource management across Rust, C++, and C. Use when writing safe systems code, managing resources, or preventing memory bugs."
+triggers:
+  - "memory-safety-patterns"
+  - "memory safety patterns"
+  - "implement"
+  - "memory-safe"
+  - "programming"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # Memory Safety Patterns

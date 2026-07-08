@@ -1,6 +1,18 @@
 ---
 name: vector-index-tuning
-description: Optimize vector index performance for latency, recall, and memory. Use when tuning HNSW parameters, selecting quantization strategies, or scaling vector search infrastructure.
+description: "Optimize vector index performance for latency, recall, and memory. Use when tuning HNSW parameters, selecting quantization strategies, or scaling vector search infrastructure."
+triggers:
+  - "vector-index-tuning"
+  - "vector index tuning"
+  - "optimize"
+  - "vector"
+  - "index"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # Vector Index Tuning

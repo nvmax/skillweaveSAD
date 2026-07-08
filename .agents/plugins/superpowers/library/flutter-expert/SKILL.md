@@ -1,12 +1,18 @@
 ---
 name: flutter-expert
-description: Master Flutter development with Dart 3, advanced widgets, and
-  multi-platform deployment. Handles state management, animations, testing, and
-  performance optimization for mobile, web, desktop, and embedded platforms. Use
-  PROACTIVELY for Flutter architecture, UI implementation, or cross-platform
-  features.
-metadata:
-  model: inherit
+description: "Master Flutter development with Dart 3, advanced widgets, and"
+triggers:
+  - "flutter-expert"
+  - "flutter expert"
+  - "master"
+  - "flutter"
+  - "development"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 ## Use this skill when

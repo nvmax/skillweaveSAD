@@ -1,6 +1,18 @@
 ---
 name: api-testing-observability-api-mock
 description: "You are an API mocking expert specializing in realistic mock services for development, testing, and demos. Design mocks that simulate real API behavior and enable parallel development."
+triggers:
+  - "api-testing-observability-api-mock"
+  - "api testing observability api mock"
+  - "mocking"
+  - "expert"
+  - "specializing"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: quality
 ---
 
 # API Mocking Framework

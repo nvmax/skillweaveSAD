@@ -1,12 +1,18 @@
 ---
 name: ui-visual-validator
-description: Rigorous visual validation expert specializing in UI testing,
-  design system compliance, and accessibility verification. Masters screenshot
-  analysis, visual regression testing, and component validation. Use PROACTIVELY
-  to verify UI modifications have achieved their intended goals through
-  comprehensive visual analysis.
-metadata:
-  model: sonnet
+description: "Rigorous visual validation expert specializing in UI testing,"
+triggers:
+  - "ui-visual-validator"
+  - "ui visual validator"
+  - "rigorous"
+  - "visual"
+  - "validation"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: quality
 ---
 
 ## Use this skill when

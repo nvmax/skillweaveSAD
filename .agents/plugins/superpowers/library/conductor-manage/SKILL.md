@@ -1,8 +1,18 @@
 ---
 name: conductor-manage
 description: "Manage track lifecycle: archive, restore, delete, rename, and cleanup"
-metadata:
-  argument-hint: "[--archive | --restore | --delete | --rename | --list | --cleanup]"
+triggers:
+  - "conductor-manage"
+  - "conductor manage"
+  - "manage"
+  - "track"
+  - "lifecycle"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: meta
 ---
 
 # Track Manager

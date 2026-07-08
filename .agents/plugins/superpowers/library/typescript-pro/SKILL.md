@@ -1,11 +1,18 @@
 ---
 name: typescript-pro
-description: Master TypeScript with advanced types, generics, and strict type
-  safety. Handles complex type systems, decorators, and enterprise-grade
-  patterns. Use PROACTIVELY for TypeScript architecture, type inference
-  optimization, or advanced typing patterns.
-metadata:
-  model: opus
+description: "Master TypeScript with advanced types, generics, and strict type"
+triggers:
+  - "typescript-pro"
+  - "typescript pro"
+  - "master"
+  - "typescript"
+  - "advanced"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 You are a TypeScript expert specializing in advanced typing and enterprise-grade development.
 

@@ -1,11 +1,18 @@
 ---
 name: java-pro
-description: Master Java 21+ with modern features like virtual threads, pattern
-  matching, and Spring Boot 3.x. Expert in the latest Java ecosystem including
-  GraalVM, Project Loom, and cloud-native patterns. Use PROACTIVELY for Java
-  development, microservices architecture, or performance optimization.
-metadata:
-  model: opus
+description: "Master Java 21+ with modern features like virtual threads, pattern"
+triggers:
+  - "java-pro"
+  - "java pro"
+  - "master"
+  - "modern"
+  - "features"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 ## Use this skill when

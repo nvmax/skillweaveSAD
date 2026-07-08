@@ -1,6 +1,18 @@
 ---
 name: shellcheck-configuration
-description: Master ShellCheck static analysis configuration and usage for shell script quality. Use when setting up linting infrastructure, fixing code issues, or ensuring script portability.
+description: "Master ShellCheck static analysis configuration and usage for shell script quality. Use when setting up linting infrastructure, fixing code issues, or ensuring script portability."
+triggers:
+  - "shellcheck-configuration"
+  - "shellcheck configuration"
+  - "master"
+  - "shellcheck"
+  - "static"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # ShellCheck Configuration and Static Analysis

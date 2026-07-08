@@ -1,6 +1,18 @@
 ---
 name: application-performance-performance-optimization
 description: "Optimize end-to-end application performance with profiling, observability, and backend/frontend tuning. Use when coordinating performance optimization across the stack."
+triggers:
+  - "application-performance-performance-optimization"
+  - "application performance performance optimization"
+  - "optimize"
+  - "end-to-end"
+  - "application"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 Optimize application performance end-to-end using specialized performance and optimization agents:

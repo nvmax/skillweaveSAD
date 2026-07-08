@@ -1,6 +1,18 @@
 ---
 name: javascript-typescript-typescript-scaffold
 description: "You are a TypeScript project architecture expert specializing in scaffolding production-ready Node.js and frontend applications. Generate complete project structures with modern tooling (pnpm, Vite, N"
+triggers:
+  - "javascript-typescript-typescript-scaffold"
+  - "javascript typescript typescript scaffold"
+  - "typescript"
+  - "project"
+  - "architecture"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # TypeScript Project Scaffolding

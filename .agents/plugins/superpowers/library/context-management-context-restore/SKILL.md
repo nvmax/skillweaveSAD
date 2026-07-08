@@ -1,6 +1,18 @@
 ---
 name: context-management-context-restore
 description: "Use when working with context management context restore"
+triggers:
+  - "context-management-context-restore"
+  - "context management context restore"
+  - "working"
+  - "context"
+  - "management"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # Context Restoration: Advanced Semantic Memory Rehydration

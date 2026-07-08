@@ -1,10 +1,18 @@
 ---
 name: seo-content-auditor
-description: Analyzes provided content for quality, E-E-A-T signals, and SEO
-  best practices. Scores content and provides improvement recommendations based
-  on established guidelines. Use PROACTIVELY for content review.
-metadata:
-  model: sonnet
+description: "Analyzes provided content for quality, E-E-A-T signals, and SEO"
+triggers:
+  - "seo-content-auditor"
+  - "seo content auditor"
+  - "analyzes"
+  - "provided"
+  - "content"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: quality
 ---
 
 ## Use this skill when

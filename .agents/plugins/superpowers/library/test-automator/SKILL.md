@@ -1,11 +1,18 @@
 ---
 name: test-automator
-description: Master AI-powered test automation with modern frameworks,
-  self-healing tests, and comprehensive quality engineering. Build scalable
-  testing strategies with advanced CI/CD integration. Use PROACTIVELY for
-  testing automation or quality assurance.
-metadata:
-  model: sonnet
+description: "Master AI-powered test automation with modern frameworks,"
+triggers:
+  - "test-automator"
+  - "test automator"
+  - "master"
+  - "ai-powered"
+  - "automation"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: quality
 ---
 
 ## Use this skill when

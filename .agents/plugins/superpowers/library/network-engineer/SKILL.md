@@ -1,13 +1,18 @@
 ---
 name: network-engineer
-description: Expert network engineer specializing in modern cloud networking,
-  security architectures, and performance optimization. Masters multi-cloud
-  connectivity, service mesh, zero-trust networking, SSL/TLS, global load
-  balancing, and advanced troubleshooting. Handles CDN optimization, network
-  automation, and compliance. Use PROACTIVELY for network design, connectivity
-  issues, or performance optimization.
-metadata:
-  model: sonnet
+description: "Expert network engineer specializing in modern cloud networking,"
+triggers:
+  - "network-engineer"
+  - "network engineer"
+  - "expert"
+  - "network"
+  - "engineer"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 ## Use this skill when

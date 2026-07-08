@@ -1,6 +1,18 @@
 ---
 name: backend-development-feature-development
 description: "Orchestrate end-to-end backend feature development from requirements to deployment. Use when coordinating multi-phase feature delivery across teams and services."
+triggers:
+  - "backend-development-feature-development"
+  - "backend development feature development"
+  - "orchestrate"
+  - "end-to-end"
+  - "backend"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 Orchestrate end-to-end feature development from requirements to production deployment:

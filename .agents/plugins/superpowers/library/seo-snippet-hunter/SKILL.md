@@ -1,10 +1,18 @@
 ---
 name: seo-snippet-hunter
-description: Formats content to be eligible for featured snippets and SERP
-  features. Creates snippet-optimized content blocks based on best practices.
-  Use PROACTIVELY for question-based content.
-metadata:
-  model: haiku
+description: "Formats content to be eligible for featured snippets and SERP"
+triggers:
+  - "seo-snippet-hunter"
+  - "seo snippet hunter"
+  - "formats"
+  - "content"
+  - "eligible"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 ## Use this skill when

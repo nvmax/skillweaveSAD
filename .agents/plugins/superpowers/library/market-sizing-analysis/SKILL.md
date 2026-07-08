@@ -1,11 +1,17 @@
 ---
 name: market-sizing-analysis
-description: This skill should be used when the user asks to "calculate TAM",
-  "determine SAM", "estimate SOM", "size the market", "calculate market
-  opportunity", "what's the total addressable market", or requests market sizing
-  analysis for a startup or business opportunity.
-metadata:
-  version: 1.0.0
+description: "This skill should be used when the user asks to "calculate TAM","
+triggers:
+  - "market-sizing-analysis"
+  - "market sizing analysis"
+  - "skill"
+  - "calculate"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # Market Sizing Analysis

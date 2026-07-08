@@ -1,6 +1,18 @@
 ---
 name: vector-database-engineer
 description: "Expert in vector databases, embedding strategies, and semantic search implementation. Masters Pinecone, Weaviate, Qdrant, Milvus, and pgvector for RAG applications, recommendation systems, and similar"
+triggers:
+  - "vector-database-engineer"
+  - "vector database engineer"
+  - "expert"
+  - "vector"
+  - "databases"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # Vector Database Engineer

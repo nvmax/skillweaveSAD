@@ -1,6 +1,18 @@
 ---
 name: security-compliance-compliance-check
 description: "You are a compliance expert specializing in regulatory requirements for software systems including GDPR, HIPAA, SOC2, PCI-DSS, and other industry standards. Perform compliance audits and provide implementation guidance."
+triggers:
+  - "security-compliance-compliance-check"
+  - "security compliance compliance check"
+  - "compliance"
+  - "expert"
+  - "specializing"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: quality
 ---
 
 # Regulatory Compliance Check

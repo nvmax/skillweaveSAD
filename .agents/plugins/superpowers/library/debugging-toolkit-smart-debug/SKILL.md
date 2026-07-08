@@ -1,6 +1,18 @@
 ---
 name: debugging-toolkit-smart-debug
 description: "Use when working with debugging toolkit smart debug"
+triggers:
+  - "debugging-toolkit-smart-debug"
+  - "debugging toolkit smart debug"
+  - "working"
+  - "debugging"
+  - "toolkit"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: debugging
 ---
 
 ## Use this skill when

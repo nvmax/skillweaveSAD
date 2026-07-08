@@ -1,8 +1,18 @@
 ---
 name: conductor-status
-description: Display project status, active tracks, and next actions
-metadata:
-  argument-hint: "[track-id] [--detailed]"
+description: "Display project status, active tracks, and next actions"
+triggers:
+  - "conductor-status"
+  - "conductor status"
+  - "display"
+  - "project"
+  - "status"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: meta
 ---
 
 # Conductor Status

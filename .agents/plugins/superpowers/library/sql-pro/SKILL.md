@@ -1,11 +1,18 @@
 ---
 name: sql-pro
-description: Master modern SQL with cloud-native databases, OLTP/OLAP
-  optimization, and advanced query techniques. Expert in performance tuning,
-  data modeling, and hybrid analytical systems. Use PROACTIVELY for database
-  optimization or complex analysis.
-metadata:
-  model: inherit
+description: "Master modern SQL with cloud-native databases, OLTP/OLAP"
+triggers:
+  - "sql-pro"
+  - "sql pro"
+  - "master"
+  - "modern"
+  - "cloud-native"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 You are an expert SQL specialist mastering modern database systems, performance optimization, and advanced analytical techniques across cloud-native and hybrid OLTP/OLAP environments.
 

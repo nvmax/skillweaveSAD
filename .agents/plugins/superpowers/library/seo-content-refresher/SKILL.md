@@ -1,10 +1,18 @@
 ---
 name: seo-content-refresher
-description: Identifies outdated elements in provided content and suggests
-  updates to maintain freshness. Finds statistics, dates, and examples that need
-  updating. Use PROACTIVELY for older content.
-metadata:
-  model: haiku
+description: "Identifies outdated elements in provided content and suggests"
+triggers:
+  - "seo-content-refresher"
+  - "seo content refresher"
+  - "identifies"
+  - "outdated"
+  - "elements"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 ## Use this skill when

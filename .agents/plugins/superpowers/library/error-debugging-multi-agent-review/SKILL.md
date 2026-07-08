@@ -1,6 +1,18 @@
 ---
 name: error-debugging-multi-agent-review
 description: "Use when working with error debugging multi agent review"
+triggers:
+  - "error-debugging-multi-agent-review"
+  - "error debugging multi agent review"
+  - "working"
+  - "error"
+  - "debugging"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: debugging
 ---
 
 # Multi-Agent Code Review Orchestration Tool

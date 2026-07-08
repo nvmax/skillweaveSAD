@@ -1,6 +1,18 @@
 ---
 name: deployment-validation-config-validate
 description: "You are a configuration management expert specializing in validating, testing, and ensuring the correctness of application configurations. Create comprehensive validation schemas, implement configurat"
+triggers:
+  - "deployment-validation-config-validate"
+  - "deployment validation config validate"
+  - "configuration"
+  - "management"
+  - "expert"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: delivery
 ---
 
 # Configuration Validation

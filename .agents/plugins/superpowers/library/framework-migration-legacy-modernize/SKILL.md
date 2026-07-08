@@ -1,6 +1,18 @@
 ---
 name: framework-migration-legacy-modernize
 description: "Orchestrate a comprehensive legacy system modernization using the strangler fig pattern, enabling gradual replacement of outdated components while maintaining continuous business operations through ex"
+triggers:
+  - "framework-migration-legacy-modernize"
+  - "framework migration legacy modernize"
+  - "orchestrate"
+  - "comprehensive"
+  - "legacy"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # Legacy Code Modernization Workflow

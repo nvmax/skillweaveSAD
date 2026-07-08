@@ -1,6 +1,18 @@
 ---
 name: security-scanning-security-dependencies
 description: "You are a security expert specializing in dependency vulnerability analysis, SBOM generation, and supply chain security. Scan project dependencies across ecosystems to identify vulnerabilities, assess risks, and recommend remediation."
+triggers:
+  - "security-scanning-security-dependencies"
+  - "security scanning security dependencies"
+  - "security"
+  - "expert"
+  - "specializing"
+outputs:
+  - "working-code"
+depends_on: []
+next_skills: []
+atomic: true
+category: implementation
 ---
 
 # Dependency Vulnerability Scanning
