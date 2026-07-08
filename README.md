@@ -6,7 +6,7 @@
 
 ## 🎯 What This Does
 
-Instead of letting the AI blindly load all 15 skills (context bloat, attention loss) or guess what to do, **SkillWeave SAD** enforces a systematic routing loop on **EVERY message**:
+Instead of letting the AI blindly load all skills (context bloat, attention loss) or guess what to do, **SkillWeave SAD** enforces a systematic routing loop on **EVERY message**:
 
 ```
                        User Request (any IDE/CLI)
