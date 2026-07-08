@@ -1,66 +1,128 @@
 # SkillWeave SAD — Superpowers Skill Library
 
-> Implementing the **Decompose → Retrieve → Compose** pipeline from [*SkillWeaver: Compositional Skill Routing for LLM Agents*](https://arxiv.org/pdf/2606.18051) — without MCP, without vector databases, for any IDE or CLI, configured via `.env`.
+> Implementing the **Decompose → Retrieve → Compose** pipeline from [*SkillWeaver: Compositional Skill Routing for LLM Agents*](https://arxiv.org/pdf/2606.18051) — without MCP, without vector databases, for any IDE or CLI, configured via `.env` (defaulting to LM Studio).
 
 ---
 
-## What is SkillWeave SAD?
+## 🎯 What This Does
 
-The paper identifies that naively loading all agent skills at once causes:
-- **Context bloat** (99%+ of context wasted on irrelevant skills)
-- **Attention loss** (agent ignores relevant skills buried in context)
-- **Poor decomposition** (agent decomposes tasks without knowing which skills exist)
-
-The fix is the **SAD (Skill-Aware Decomposition) pipeline**:
+Instead of letting the AI blindly load all 15 skills (context bloat, attention loss) or guess what to do, **SkillWeave SAD** enforces a systematic routing loop on **EVERY message**:
 
 ```
-User Request (EVERY message goes through SAD first)
-    │
-    ▼
-┌──────────────────────────────────────────────────────┐
-│ DECOMPOSE (Iterative SAD)                            │
-│ Break request into atomic sub-tasks.                 │
-│ Check skill-index.json for each sub-task.            │
-│ Re-decompose if unmatched (DA feedback loop).        │
-│ Target: DA = 1.0 (all sub-tasks → known skill)       │
-└──────────────────────────────────────────────────────┘
-    │
-    ▼
-┌──────────────────────────────────────────────────────┐
-│ RETRIEVE                                             │
-│ Load ONLY the matched SKILL.md files (1-4 max)       │
-│ from the hidden library/ folder.                     │
-│ 90-99% context window savings vs. loading all.       │
-└──────────────────────────────────────────────────────┘
-    │
-    ▼
-┌──────────────────────────────────────────────────────┐
-│ COMPOSE (DAG)                                        │
-│ Read skill-dag.json → topological sort.              │
-│ Execute skills in dependency order.                  │
-│ Each skill's output feeds the next.                  │
-└──────────────────────────────────────────────────────┘
+                       User Request (any IDE/CLI)
+                                   │
+                                   ▼
+                      [ Task Decomposer (SAD) ]
+            Iteratively match sub-tasks to skill index (DA = 1.0)
+                                   │
+                                   ▼
+                         [ Skill Retriever ]
+                  Load ONLY the 1-3 matched skills
+             (90%+ token savings by hiding other skills)
+                                   │
+                                   ▼
+                         [ DAG Composition ]
+                 Topologically sort dependencies
+                                   │
+                                   ▼
+                          [ Skill Execution ]
+                        Sequential execution
 ```
 
 ---
 
-## Restructuring & Hiding Skills
+## 🚀 Getting Started (Step-by-Step)
 
-To prevent the LLM from automatically loading all skills at once (which defeats the entire SAD architecture), **14 individual skills have been hidden in a separate `library/` directory**.
+Before starting, make sure you have **Python 3.10 or newer** installed. Check via:
+```bash
+python --version
+```
 
-Only two visible entrypoints remain in `skills/`:
-- **`skills/skillweave-orchestrator/`** — the SAD pipeline engine
-- **`skills/using-superpowers/`** — the entrypoint trigger
+### Option A: Set Up in a New Project (Recommended)
 
-All other 14 skills are hidden inside `library/` and retrieved dynamically on demand during execution.
+To use this framework as the engine for a new workspace or project:
+
+1. **Create your project folder:**
+   ```bash
+   mkdir my-awesome-project
+   cd my-awesome-project
+   ```
+
+2. **Copy the `.agents` folder and configuration files into your project:**
+   Copy these from your cloned copy of this repository:
+   - The `.agents/` folder (contains the hidden `library/`, `skills/`, and orchestrator)
+   - Configuration files: `AGENTS.md`, `CLAUDE.md`, `.clinerules`, `.cursor/rules/skillweave-sad.mdc`, `CONVENTIONS.md`
+
+3. **Initialize git (Required):**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initialize project with SkillWeave SAD superpowers"
+   ```
+
+4. **Configure your environment:**
+   Copy `.env.example` to `.env` and fill it in:
+   ```bash
+   cp .env.example .env
+   ```
+
+5. **Start your IDE or CLI:**
+   Open Antigravity, Claude Code, Cursor, Aider, or Cline in the `my-awesome-project` directory. The adapter files will automatically trigger the orchestrator on your first prompt!
 
 ---
 
-## Configuration via `.env`
+### Option B: Use This Repository Directly (Demo & Testing)
 
-You can configure the API endpoint and provider for the SAD routing pipeline via a `.env` file at the root of the workspace.
+1. **Clone this repository:**
+   ```bash
+   git clone https://github.com/nvmax/skillweaveSAD.git
+   cd skillweaveSAD
+   ```
 
-See [.env.example](.env.example) for setup:
+2. **Copy the environment configuration:**
+   ```bash
+   cp .env.example .env
+   ```
+   *By default, it is preconfigured to use LM Studio at `http://localhost:1234/v1`.*
+
+3. **Run a test query via the Python CLI:**
+   ```bash
+   python skillweave.py "I want to add a dark mode toggle to my React app"
+   ```
+   This will run the SAD loop, decompose the query, match triggers, topologically sort the DAG, and display the plan.
+
+---
+
+## 📖 Setup by IDE / CLI
+
+The repository includes pre-built platform rules files that automatically force the agent to run the SAD orchestrator before responding to any prompt.
+
+### Antigravity IDE & Cursor
+- **How it works:** Auto-discovered via the `.cursor/rules/skillweave-sad.mdc` MDC rule.
+- **Location:** `.cursor/rules/skillweave-sad.mdc`
+- **Setup:** Opened automatically when the project directory is loaded.
+
+### Claude CLI (Claude Code)
+- **How it works:** Claude Code reads the `CLAUDE.md` instructions automatically on startup.
+- **Location:** `CLAUDE.md` at project root.
+
+### Cline
+- **How it works:** Cline reads `.clinerules` from the workspace root on every request.
+- **Location:** `.clinerules` at project root.
+
+### Aider CLI
+- **How it works:** Aider reads `CONVENTIONS.md` automatically.
+- **Location:** `CONVENTIONS.md` at project root.
+
+### Generic CLI / Custom Agents
+- **How it works:** Read `AGENTS.md` at startup.
+
+---
+
+## ⚙️ Configuration via `.env`
+
+The framework reads the `.env` file at the root of the workspace to determine which LLM API provider to call for decomposition and routing.
+
 ```env
 SKILLWEAVE_PROVIDER=lmstudio
 SKILLWEAVE_MODEL=
@@ -71,37 +133,13 @@ SKILLWEAVE_BASE_URL=http://localhost:1234/v1
 ### Supported Providers
 - **LM Studio**: (Default) Set `SKILLWEAVE_PROVIDER=lmstudio` and `SKILLWEAVE_BASE_URL=http://localhost:1234/v1`
 - **Ollama**: Set `SKILLWEAVE_PROVIDER=ollama` and `SKILLWEAVE_BASE_URL=http://localhost:11434/v1`
-- **Gemini**: `gemini-2.5-pro | gemini-2.0-flash | gemini-1.5-pro`
-- **Anthropic**: `claude-3-5-sonnet-20241022 | claude-3-haiku-20240307`
-- **OpenAI**: `gpt-4o | gpt-4o-mini | o1`
+- **Gemini**: Set `SKILLWEAVE_PROVIDER=gemini` and provide `SKILLWEAVE_API_KEY`
+- **Anthropic**: Set `SKILLWEAVE_PROVIDER=anthropic` and provide `SKILLWEAVE_API_KEY`
+- **OpenAI**: Set `SKILLWEAVE_PROVIDER=openai` and provide `SKILLWEAVE_API_KEY`
 
 ---
 
-## Standalone Python Runner
-
-A zero-dependency Python script [skillweave.py](skillweave.py) runs the SAD pipeline on any machine:
-```bash
-python skillweave.py "I want to add a dark mode toggle to my React app"
-```
-It reads the `.env` settings, executes SAD decomposition via the selected LLM, semantically matches tasks against the `skill-index.json` triggers, retrieves the required skills from `library/`, and outputs a topologically sorted DAG execution plan.
-
----
-
-## Setup by IDE / CLI (Mandatory First-Use)
-
-To ensure that the agent runs the SAD orchestrator on the very first request, the configuration files for all platforms are configured as **strict first-use mandates**.
-
-- **Claude Code**: reads [`CLAUDE.md`](./CLAUDE.md)
-- **Cursor**: reads [`.cursor/rules/skillweave-sad.mdc`](./.cursor/rules/skillweave-sad.mdc)
-- **Cline**: reads [`.clinerules`](./.clinerules)
-- **Aider**: reads [`CONVENTIONS.md`](./CONVENTIONS.md)
-- **Generic CLI**: reads [`AGENTS.md`](./AGENTS.md)
-
-Each file mandates that the agent read `.agents/plugins/superpowers/skills/skillweave-orchestrator/SKILL.md` before responding or performing any action.
-
----
-
-## Key Files
+## 🗂️ Project Directory Structure
 
 ```
 SkillWeave SAD/
@@ -118,17 +156,30 @@ SkillWeave SAD/
     │   ├── skill-index.json            ← LOAD THIS FIRST (retrieval index)
     │   ├── skill-dag.json              ← Dependency graph (DAG)
     │   └── skillweave-orchestrator/    ← Full SAD pipeline
-    └── library/                        ← Isolated, hidden skills
+    └── library/                        ← Isolated, hidden skills (loaded dynamically)
         ├── brainstorming/SKILL.md
         ├── writing-plans/SKILL.md
-        ├── ... (all other 12 skills)
+        ├── executing-plans/SKILL.md
+        ├── test-driven-development/SKILL.md
+        ├── systematic-debugging/SKILL.md
+        ├── subagent-driven-development/SKILL.md
+        ├── verification-before-completion/SKILL.md
+        ├── finishing-a-development-branch/SKILL.md
+        ├── browser-testing/SKILL.md
+        ├── dispatching-parallel-agents/SKILL.md
+        ├── requesting-code-review/SKILL.md
+        ├── receiving-code-review/SKILL.md
+        ├── using-git-worktrees/SKILL.md
+        └── writing-skills/SKILL.md
 ```
 
 ---
 
-## Adding New Skills
+## 🛠️ Adding New Skills
 
 When adding new skills:
-1. Create a directory in `library/<new-skill>/` and place your `SKILL.md` inside it.
+1. Create a directory in `.agents/plugins/superpowers/library/<new-skill>/` and place your `SKILL.md` inside it.
 2. Add the skill to `skills/skill-index.json` with the path pointing to `library/<new-skill>/SKILL.md`.
 3. Add dependency edges to `skills/skill-dag.json`.
+
+See [`skills/skillweave-orchestrator/examples/sad-alignments.md`](.agents/plugins/superpowers/skills/skillweave-orchestrator/examples/sad-alignments.md) for worked decomposition examples.
