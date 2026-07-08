@@ -53,20 +53,13 @@ To use this framework as the engine for a new workspace or project:
    - The `.agents/` folder (contains the hidden `library/`, `skills/`, and orchestrator)
    - Configuration files: `AGENTS.md`, `CLAUDE.md`, `.clinerules`, `.cursor/rules/skillweave-sad.mdc`, `CONVENTIONS.md`
 
-3. **Initialize git (Required):**
-   ```bash
-   git init
-   git add .
-   git commit -m "Initialize project with SkillWeave SAD superpowers"
-   ```
-
-4. **Configure your environment:**
+3. **Configure your environment:**
    Copy `.env.example` to `.env` and fill it in:
    ```bash
    cp .env.example .env
    ```
 
-5. **Start your IDE or CLI:**
+4. **Start your IDE or CLI:**
    Open Antigravity, Claude Code, Cursor, Aider, or Cline in the `my-awesome-project` directory. The adapter files will automatically trigger the orchestrator on your first prompt!
 
 ---
